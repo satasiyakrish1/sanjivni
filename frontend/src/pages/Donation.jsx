@@ -263,7 +263,7 @@ const Donation = () => {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount: order.amount,
       currency: order.currency,
-      name: 'Prescripto Donation',
+      name: 'Sanjivani Donation',
       description: 'Support our healthcare mission',
       order_id: order.id,
       handler: async (response) => {
@@ -330,9 +330,9 @@ const Donation = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <SEO
-        title="Donate to Prescripto - Support Healthcare Innovation"
-        description="Support Prescripto's mission to make healthcare accessible to all. Your donation helps us improve and expand our services."
-        keywords="donate, healthcare donation, support healthcare, Prescripto donation"
+        title="Donate to Sanjivani - Support Natural Wellness Innovation"
+        description="Support Sanjivni's mission to make safe, effective herbal guidance accessible. Your donation helps us improve and expand our services."
+        keywords="donate, herbal remedies donation, support natural wellness, Sanjivani donation"
         canonicalUrl="/donation"
       />
 
@@ -572,7 +572,7 @@ const Donation = () => {
                 </svg>
               ))}
             </div>
-            <p className="text-gray-600 mb-4">"Donating to Prescripto was easy and I love knowing my contribution is making healthcare more accessible."</p>
+            <p className="text-gray-600 mb-4">"Donating to Sanjivani was easy and I love knowing my contribution is making natural wellness guidance more accessible."</p>
             <div className="font-medium">- Priya S.</div>
           </div>
 
@@ -584,7 +584,7 @@ const Donation = () => {
                 </svg>
               ))}
             </div>
-            <p className="text-gray-600 mb-4">"I donate monthly to support Prescripto's mission. Their transparency about how funds are used is impressive."</p>
+            <p className="text-gray-600 mb-4">"I donate monthly to support Sanjivni's mission. Their transparency about how funds are used is impressive."</p>
             <div className="font-medium">- Rajesh M.</div>
           </div>
 
@@ -596,7 +596,7 @@ const Donation = () => {
                 </svg>
               ))}
             </div>
-            <p className="text-gray-600 mb-4">"After seeing the impact Prescripto has in rural communities, donating was an easy decision. Their work is life-changing."</p>
+            <p className="text-gray-600 mb-4">"After seeing the impact Sanjivani has in communities, donating was an easy decision. Their work is inspiring."</p>
             <div className="font-medium">- Anjali K.</div>
           </div>
         </div>
@@ -609,7 +609,7 @@ const Donation = () => {
         <div className="space-y-4">
           <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
             <h3 className="font-medium text-lg text-gray-800 mb-2">Is my donation tax-deductible?</h3>
-            <p className="text-gray-600">Yes, Prescripto is a registered non-profit organization, and all donations are eligible for tax deduction under Section 80G of the Income Tax Act.</p>
+            <p className="text-gray-600">Yes, Sanjivani is a registered non-profit organization, and all donations are eligible for tax deduction under Section 80G of the Income Tax Act.</p>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">

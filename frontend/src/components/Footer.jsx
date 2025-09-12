@@ -7,6 +7,7 @@ const Footer = () => {
   const [email, setEmail] = useState('');
   const [subscribeStatus, setSubscribeStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
   
   // Try to access environment variables safely with fallbacks
   const facebookUrl = import.meta.env.REACT_APP_FACEBOOK_URL || "https://facebook.com/satasiyakrish1";
@@ -16,52 +17,26 @@ const Footer = () => {
 
   // Handle email input changes
   const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-    // Reset status message when user types
-    if (subscribeStatus) {
-      setSubscribeStatus('');
-    }
+    const value = e.target.value;
+    setEmail(value);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    setIsEmailValid(emailRegex.test(value));
+    if (subscribeStatus) setSubscribeStatus('');
   };
 
   // Handle subscription form submission
-  const handleSubscribe = async (e) => {
+  const handleSubscribe = (e) => {
     e.preventDefault();
-    
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     if (!email || !emailRegex.test(email)) {
+      setIsEmailValid(false);
       setSubscribeStatus('Please enter a valid email address');
       return;
     }
-
-    setIsLoading(true);
-
-    try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-          email,
-          subscribeDate: new Date()
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubscribeStatus('Thank you for subscribing!');
-        setEmail('');
-      } else {
-        setSubscribeStatus(data.message || 'Subscription failed. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error during subscription:', error);
-      setSubscribeStatus('An error occurred. Please try again later.');
-    } finally {
-      setIsLoading(false);
-    }
+    // No network request; just show success and reset
+    setSubscribeStatus('Thank you for subscribing!');
+    setIsEmailValid(false);
+    setEmail('');
   };
 
   return (
@@ -71,10 +46,10 @@ const Footer = () => {
         <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
           {/* Company Info */}
           <div>
-            <img className="mb-5 w-40" src={assets.logo} alt="Prescripto Logo" />
+            <img className="mb-5 w-40" src={assets.logo} alt="Sanjivani Logo" />
             <p className="w-full md:w-2/3 text-gray-600 leading-6">
-              Prescripto is dedicated to advancing healthcare technology with a commitment to quality and innovation.
-              Our platform evolves with the latest enhancements to ensure an exceptional user experience and unparalleled service.
+            Sanjivani is an AI-powered herbal remedy finder that helps you discover natural 
+            solutions for your health. By simply entering your symptoms, Sanjivani instantly suggests the best herbal and Ayurvedic remedies tailored to your needs.
             </p>
             {/* Social Media Icons */}
 
@@ -100,7 +75,6 @@ const Footer = () => {
             <ul className="flex flex-col gap-2 text-gray-600">
               <li><a href="/team" className="hover:text-gray-800">Our Team</a></li>
               <li><a href="/Privacy" className="hover:text-gray-800">Privacy policy</a></li>
-              <li><a href="/Features" className="hover:text-gray-800">Features</a></li>
               <li><a href="/faq" className="hover:text-gray-800">FAQ</a></li>
             </ul>
           </div>
@@ -115,7 +89,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={16} className="mr-2" />
-                <a href="mailto:krishsatasiya44@gmail.com" className="hover:text-gray-800">krishsatasiya44@gmail.com</a>
+                <a href="mailto:sanjivni@gmail.com" className="hover:text-gray-800">sanjivni@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -141,11 +115,11 @@ const Footer = () => {
                 <button 
                   type="submit"
                   className={`bg-blue-600 whitespace-nowrap text-white px-4 py-2 rounded-r-md transition-colors duration-300 text-sm ${
-                    isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-blue-700'
+                    !isEmailValid ? 'opacity-70 cursor-not-allowed' : 'hover:bg-blue-700'
                   }`}
-                  disabled={isLoading}
+                  disabled={!isEmailValid}
                 >
-                  {isLoading ? 'Subscribing...' : 'Subscribe'}
+                  Subscribe
                 </button>
               </form>
             </div>
@@ -158,13 +132,18 @@ const Footer = () => {
               {subscribeStatus}
             </div>
           )}
+          {!subscribeStatus && email && (
+            <div className={`text-center mt-3 text-sm ${isEmailValid ? 'text-green-600' : 'text-red-500'}`}>
+              {isEmailValid ? 'Looks good!' : 'Please enter a valid email address'}
+            </div>
+          )}
         </div>
 
         {/* Copyright */}
         <div>
           <hr />
           <div className="flex flex-col sm:flex-row items-center justify-between py-5 text-sm">
-            <p className="text-left w-full sm:w-auto">Copyright {currentYear} @ Mr.Krish Satasiya - All Right Reserved.</p>
+            <p className="text-left w-full sm:w-auto">Copyright {currentYear} @Team Sanjivani - All Right Reserved.</p>
             <a href="/sitemap" className="mt-2 sm:mt-0 inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded hover:bg-blue-200 transition">Site Map</a>
           </div>
         </div>

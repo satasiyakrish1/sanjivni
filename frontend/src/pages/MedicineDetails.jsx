@@ -318,7 +318,7 @@ const MedicineDetails = () => {
   return (
     <div className="py-8 px-4 bg-gray-50 min-h-screen" ref={pageRef}>
       <SEO
-        title={`${medicine.name} - Medicine Details | Prescripto`}
+        title={`${medicine.name} - Medicine Details | Sanjivni`}
         description={`Detailed information about ${medicine.name}, including dosage, composition, and medical uses.`}
         keywords={`${medicine.name}, ${medicine.genericName}, medicine details, prescription, dosage`}
         canonicalUrl={`/medicines/${id}`}

@@ -2,21 +2,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({
-  title = 'Prescripto',
-  description = 'Book appointments with trusted doctors, browse medicines, and manage your health with Prescripto.',
-  keywords = 'doctors, appointments, medicines, healthcare, prescriptions, medical, health',
+  title = 'Sanjivani – AI-Powered Herbal Remedy Finder',
+  description = 'Sanjivani is an AI-powered herbal remedy finder that helps you discover natural solutions for your health. By simply entering your symptoms, Sanjivani instantly suggests the best herbal and Ayurvedic remedies tailored to your needs. Combining the wisdom of traditional herbal medicine with modern AI technology, Sanjivani makes it easy to find safe, effective, and natural treatments for common health concerns. Whether you are looking for Ayurveda-based remedies, home herbal solutions, or natural symptom checkers, Sanjivani is your go-to platform for smarter, healthier living.',
+  keywords = 'Sanjivni, herbal remedies, Ayurveda, ayurvedic, natural remedies, symptom checker, herbal medicine, AI health, home remedies, herbal remedy finder, natural treatments',
   canonicalUrl,
   ogType = 'website',
   ogImage = '/favicon.svg',
   twitterCard = 'summary_large_image',
-  twitterSite = '@prescripto',
-  author = 'Prescripto',
+  twitterSite = '@sanjivni',
+  author = 'Sanjivni',
   publishedTime,
   modifiedTime,
   children
 }) => {
   // Build the full canonical URL
-  const siteUrl = 'https://krishsatasiya-prescriptosystem.onrender.com';
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://sanjivni.example.com';
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
   const fullOgImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
   
@@ -39,7 +39,7 @@ const SEO = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:image" content={fullOgImageUrl} />
-      <meta property="og:site_name" content="Prescripto" />
+      <meta property="og:site_name" content="Sanjivni" />
       <meta property="og:locale" content="en_US" />
       
       {/* Article specific Open Graph tags */}
@@ -69,18 +69,18 @@ const SEO = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Prescripto",
+          "name": "Sanjivni",
           "url": siteUrl,
-          "logo": `${siteUrl}/logo.png`,
+          "logo": `${siteUrl}/favicon.svg`,
           "sameAs": [
-            "https://www.facebook.com/satasiyakrish1",
-            "https://www.twitter.com/satasiyakrish1",
-            "https://www.linkedin.com/company/satasiyakrish1",
-            "https://www.instagram.com/satasiyakrish1"
+            "https://www.facebook.com/",
+            "https://www.twitter.com/",
+            "https://www.linkedin.com/company/",
+            "https://www.instagram.com/"
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "email": "krishsatasiya44@gmail.com",
+            "email": "sanjivni@gmail.com",
             "contactType": "customer service"
           }
         })}

@@ -7,7 +7,7 @@ const Cosmetics = () => {
   return (
     <div className="py-8">
       <SEO 
-        title="Cosmetics Search | Prescripto" 
+        title="Cosmetics Search | Sanjivni" 
         description="Search and explore cosmetic products from top brands. Find makeup, skincare, and beauty products with detailed information." 
       />
       

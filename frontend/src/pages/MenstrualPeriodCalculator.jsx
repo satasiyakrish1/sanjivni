@@ -110,7 +110,7 @@ const MenstrualPeriodCalculator = () => {
   return (
     <div className="bg-gray-50 min-h-screen pb-16">
       <SEO 
-        title="Menstrual Period Calculator - Track Your Cycle | Prescripto"
+        title="Menstrual Period Calculator - Track Your Cycle | Sanjivni"
         description="Plan ahead with our Menstrual Period Calculator. Track your cycle, predict your next 12 periods, and identify fertile windows for better health management."
         keywords="menstrual calculator, period tracker, menstrual cycle, period calendar, fertility window, ovulation calculator"
         canonicalUrl="/menstrual-period-calculator"

@@ -91,7 +91,7 @@ const Events = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title="Events | Prescripto" 
+        title="Events | Sanjivni" 
         description="Browse and register for upcoming health and wellness events." 
       />
       

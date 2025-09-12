@@ -105,7 +105,7 @@ const HerbalRemedySearch = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
             <label htmlFor="symptoms" className="sr-only">Describe your symptoms</label>
-            <div className="relative">
+            <div className="relative" id="symptoms">
               <textarea
                 ref={textareaRef}
                 id="symptoms"

@@ -49,9 +49,9 @@ const MedicineSearch = () => {
     doc.setProperties({
       title: `${medicine.name} - Medical Information`,
       subject: 'Medication Information Sheet',
-      author: 'Prescripto Health',
+      author: 'Sanjivani Health',
       keywords: 'medication, prescription, healthcare',
-      creator: 'Prescripto PDF Generator'
+      creator: 'Sanjivani PDF Generator'
     });
     
     const pageWidth = doc.internal.pageSize.getWidth();
@@ -310,7 +310,7 @@ const MedicineSearch = () => {
     doc.setFont('helvetica', 'normal');
     const today = new Date().toLocaleDateString();
     doc.text(`Generated on: ${today}`, margin, yPosition);
-    doc.text('Prescripto Health Systems', pageWidth / 2, yPosition, { align: 'center' });
+    doc.text('Sanjivani Health Systems', pageWidth / 2, yPosition, { align: 'center' });
     doc.text('Page 1', pageWidth - margin, yPosition, { align: 'right' });
     
     // Add QR code visual placeholder in bottom corner

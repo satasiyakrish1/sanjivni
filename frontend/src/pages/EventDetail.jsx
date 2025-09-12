@@ -402,7 +402,7 @@ const EventDetail = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${event.title} | Prescripto Events`} 
+        title={`${event.title} | Sanjivani Events`} 
         description={event.description.substring(0, 160)} 
       />
       
@@ -427,7 +427,7 @@ const EventDetail = () => {
                   <div>
                     <h1 className="text-3xl font-bold text-gray-900">{event.title}</h1>
                     <p className="mt-1 max-w-2xl text-sm text-gray-500">
-                      Organized by Prescripto
+                      Organized by Sanjivni
                     </p>
                   </div>
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${event.status === 'upcoming' ? 'bg-green-100 text-green-800' : event.status === 'ongoing' ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800'}`}>

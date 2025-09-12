@@ -75,7 +75,7 @@ const ApiMarketplace = () => {
         key: process.env.RAZORPAY_KEY_ID,
         amount: orderData.amount,
         currency: orderData.currency,
-        name: 'Prescripto API',
+        name: 'Sanjivani API',
         description: `${packageType.charAt(0).toUpperCase() + packageType.slice(1)} Package`,
         order_id: orderData.orderId,
         handler: async (response) => {
@@ -129,7 +129,7 @@ const ApiMarketplace = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Prescripto Booking API
+            Sanjivani Booking API
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Integrate our powerful appointment booking system into your healthcare platform

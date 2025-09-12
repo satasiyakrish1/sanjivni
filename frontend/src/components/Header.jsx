@@ -11,20 +11,20 @@ const Header = () => {
             <div className='relative md:w-1/2 flex flex-col items-start justify-center gap-6 py-10 m-auto md:py-[10vw] md:mb-[-30px]'>
                 <div className='animate-fade-in-up'>
                     <p className='text-3xl md:text-4xl lg:text-5xl text-white font-semibold leading-tight md:leading-tight lg:leading-tight'>
-                        Book Appointment <br />  With Trusted Doctors
+                        Find Herbal <br /> Remedies Instantly
                     </p>
                 </div>
                 
-                <SearchBar />
+               
 
                 <div className='flex flex-col md:flex-row items-center gap-3 text-white text-sm font-light animate-fade-in-up animation-delay-200'>
                     <img className='w-28 hover:scale-105 transition-transform duration-300' src={assets.group_profiles} alt="Trusted Doctors" />
-                    <p>Simply browse through our extensive list of trusted doctors, <br className='hidden sm:block' /> schedule your appointment hassle-free.</p>
+                    <p>Simply explore our wide range of herbal remedies and, <br className='hidden sm:block' /> get AI-powered suggestions for your symptoms, hassle-free.</p>
                 </div>
                 
                 <div className='flex gap-4 animate-fade-in-up animation-delay-300'>
-                    <a href='#speciality' className='flex items-center gap-2 bg-white px-8 py-3 rounded-full text-[#595959] text-sm m-auto md:m-0 hover:scale-105 transition-all duration-300'>
-                        Book appointment <img className='w-3' src={assets.arrow_icon} alt="Arrow" />
+                    <a href='#symptoms' className='flex items-center gap-2 bg-white px-8 py-3 rounded-full text-[#595959] text-sm m-auto md:m-0 hover:scale-105 transition-all duration-300'>
+                       Find Herbalal <img className='w-3' src={assets.arrow_icon} alt="Arrow" />
                     </a>
                     <a href='#statistics' className='flex items-center gap-2 bg-transparent border-2 border-white px-8 py-3 rounded-full text-white text-sm m-auto md:m-0 hover:scale-105 transition-all duration-300'>
                         Learn More

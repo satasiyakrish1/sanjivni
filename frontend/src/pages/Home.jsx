@@ -13,8 +13,8 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="Prescripto - Book Appointments With Trusted Doctors"
-        description="Book appointments with trusted doctors, browse medicines, and manage your health with Prescripto's easy-to-use healthcare platform."
+        title="Sanjivani – Book Appointments With Trusted Doctors"
+        description="Book appointments with trusted doctors, browse medicines, and manage your health with Sanjivni's easy-to-use platform."
         keywords="doctors, appointments, medicines, healthcare, prescriptions, medical, health, book appointment"
         canonicalUrl="/"
       />

@@ -13,12 +13,12 @@ const Terms = () => {
 
           <section className="my-10 space-y-6">
             <p>
-              Welcome to Prescripto. By accessing or using our Service, you agree to be bound by these Terms and Conditions. Please read these terms carefully before using our platform.
+              Welcome to Sanjivni. By accessing or using our Service, you agree to be bound by these Terms and Conditions. Please read these terms carefully before using our platform.
             </p>
 
             <h2 className="text-lg font-semibold">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using Prescripto's services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our services.
+              By accessing or using Sanjivni's services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our services.
             </p>
 
             <h2 className="text-lg font-semibold">2. Medical Disclaimer</h2>
@@ -69,12 +69,12 @@ const Terms = () => {
 
             <h2 className="text-lg font-semibold">7. Intellectual Property</h2>
             <p>
-              All content and materials available on Prescripto are protected by intellectual property rights. You may not use, reproduce, or distribute our content without authorization.
+              All content and materials available on Sanjivani are protected by intellectual property rights. You may not use, reproduce, or distribute our content without authorization.
             </p>
 
             <h2 className="text-lg font-semibold">8. Limitation of Liability</h2>
             <p>
-              To the maximum extent permitted by law, Prescripto and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service.
+              To the maximum extent permitted by law, Sanjivani and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service.
             </p>
 
             <h2 className="text-lg font-semibold">9. Privacy</h2>
@@ -90,7 +90,7 @@ const Terms = () => {
             <h2 className="text-lg font-semibold">Contact Us</h2>
             <p>If you have any questions about these Terms and Conditions, please contact us:</p>
             <ul className="list-disc pl-6">
-              <li>By email: support@prescripto</li>
+              <li>By email: support@sanjivani</li>
               <li>By visiting our contact page: <a href="./contact/" className="text-blue-500">Contact Us</a></li>
               <li>By phone: +91 90543 09266</li>
             </ul>

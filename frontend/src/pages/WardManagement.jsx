@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 const WardManagementPage = () => {
     return (
         <>
-            <SEO title="Ward Management | Prescripto" description="Manage hospital wards, track bed availability, and handle emergency cases" />
+            <SEO title="Ward Management | Sanjivni" description="Manage hospital wards, track bed availability, and handle emergency cases" />
             <div className="min-h-screen bg-gray-50">
                 <WardManagement />
             </div>

@@ -7,15 +7,15 @@ const About = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <SEO
-        title="About Prescripto - Your Trusted Healthcare Partner"
-        description="Learn about Prescripto's mission to provide convenient healthcare solutions, connecting patients with trusted doctors and simplifying appointment scheduling with industry-leading security."
-        keywords="about prescripto, healthcare platform, medical appointments, doctor scheduling, healthcare technology, secure health records"
+        title="About Sanjivani – AI-Powered Herbal Remedy Finder"
+        description="Learn about Sanjivni, the AI-powered platform that blends Ayurvedic wisdom with modern AI to suggest safe, effective herbal remedies tailored to your symptoms."
+        keywords="about sanjivni, herbal remedies, ayurveda, ai health, natural remedies, symptom checker"
         canonicalUrl="/about"
       />
 
       {/* Hero Section */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-800">About <span className="text-primary">Prescripto</span></h1>
+        <h1 className="text-4xl font-bold text-gray-800">About <span className="text-primary">Sanjivni</span></h1>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
           Transforming healthcare access through technology since 2020
         </p>
@@ -27,13 +27,13 @@ const About = () => {
           <img
             className="w-full rounded-lg shadow-lg"
             src={assets.about_image}
-            alt="Prescripto Healthcare Platform"
+            alt="Sanjivani Platform"
           />
         </div>
         <div className="lg:w-1/2 flex flex-col justify-center gap-6">
           <h2 className="text-3xl font-bold text-gray-800">Our Mission</h2>
           <p className="text-gray-600">
-            Welcome to Prescripto, your trusted partner in managing your healthcare needs conveniently and efficiently. At Prescripto, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records.
+            Welcome to Sanjivni, your companion for discovering safe, effective herbal and Ayurvedic remedies. We combine traditional wisdom with modern AI to guide your everyday wellness decisions.
           </p>
           <p className="text-gray-600">
             Our mission is to simplify healthcare access for everyone. By connecting patients with qualified healthcare providers through our intuitive platform, we're removing barriers to quality care and empowering individuals to take control of their health journey.
@@ -41,7 +41,7 @@ const About = () => {
 
           <h2 className="text-3xl font-bold text-gray-800 mt-6">Our Vision</h2>
           <p className="text-gray-600">
-            Our vision at Prescripto is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.
+            Our vision with Sanjivani is to make natural wellness accessible, understandable, and personalized for everyone.
           </p>
           <p className="text-gray-600">
             We envision a world where healthcare is accessible, affordable, and personalized for everyone, regardless of location or circumstance.
@@ -51,7 +51,7 @@ const About = () => {
 
       {/* Why Choose Us */}
       <div className="mb-20">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Why Choose Prescripto</h2>
+        <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Why Choose Sanjivni</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center mb-4">
@@ -260,7 +260,7 @@ const About = () => {
             </button>
           </a>
 
-          <a href="mailto:krishsatasiya44@gmail.com">
+          <a href="mailto:sanjivni@gmail.com">
             <button className="bg-white text-primary border border-primary py-3 px-6 rounded-lg hover:bg-gray-50 transition-colors duration-300">
               Schedule a Demo
             </button>

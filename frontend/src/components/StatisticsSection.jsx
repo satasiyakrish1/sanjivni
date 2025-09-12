@@ -4,10 +4,10 @@ import { useInView } from 'react-intersection-observer';
 const StatisticsSection = () => {
   // Static statistics data
   const statistics = [
-    { id: 1, title: 'Happy Patients', value: 1000, icon: '😊' },
-    { id: 2, title: 'Expert Doctors', value: 50, icon: '👨‍⚕️' },
-    { id: 3, title: 'Years of Service', value: 10, icon: '⭐' },
-    { id: 4, title: 'Health Tips', value: 200, icon: '💡' },
+    { id: 1, title: 'Herbal Remedies Suggested', value: 500, icon: '😊' },
+    { id: 2, title: 'Satisfied Users', value: 3500, icon: '👨‍⚕️' },
+    { id: 3, title: 'AI-Driven Consultations', value: 1200, icon: '⭐' },
+    { id: 4, title: 'States Reached in India', value: 15, icon: '💡' },
   ];
 
   // State to trigger animation when component is in view

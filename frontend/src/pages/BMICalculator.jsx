@@ -114,7 +114,7 @@ const BMICalculator = () => {
   return (
     <div className="bg-gray-50 min-h-screen pb-16">
       <SEO 
-        title="BMI Calculator - Check Your Body Mass Index | Prescripto"
+        title="BMI Calculator - Check Your Body Mass Index | Sanjivni"
         description="Calculate your Body Mass Index (BMI) with our advanced calculator. Track your BMI history, get personalized recommendations, and understand what BMI means for your health."
         keywords="BMI calculator, body mass index, weight calculator, health calculator, BMI measurement, weight status, health recommendations"
         canonicalUrl="/bmi-calculator"

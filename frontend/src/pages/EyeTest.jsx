@@ -192,7 +192,7 @@ const EyeTest = () => {
   return (
     <div className={`min-h-screen pb-16 transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-800'}`}>
       <SEO 
-        title="Eye Test - Check Your Vision Online | Prescripto"
+        title="Eye Test - Check Your Vision Online | Sanjivni"
         description="Test your vision with our online eye tests. Check visual acuity, color blindness, astigmatism, and contrast sensitivity from the comfort of your home."
         keywords="eye test, vision test, online eye exam, color blindness test, astigmatism test, contrast sensitivity, visual acuity"
         canonicalUrl="/eye-test"

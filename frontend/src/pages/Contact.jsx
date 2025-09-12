@@ -50,15 +50,15 @@ const Contact = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <SEO
-        title="Contact Prescripto - Get in Touch With Our Team"
-        description="Have questions or need assistance? Contact the Prescripto team for support with appointments, medicines, or any other healthcare needs."
+        title="Contact Sanjivani - Get in Touch With Our Team"
+        description="Have questions or need assistance? Contact the Sanjivani team for support with herbal remedies, appointments, medicines, or any other needs."
         keywords="contact prescripto, healthcare support, customer service, help, contact us, healthcare assistance"
         canonicalUrl="/contact"
       />
 
       {/* Hero Section */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-800">Contact <span className="text-primary">Prescripto</span></h1>
+        <h1 className="text-4xl font-bold text-gray-800">Contact <span className="text-primary">Sanjivni</span></h1>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
           We're here to help with all your healthcare needs
         </p>
@@ -72,7 +72,7 @@ const Contact = () => {
             <img
               className="w-full"
               src={assets.about}
-              alt="Prescripto Contact Support"
+              alt="Sanjivani Contact Support"
             />
           </div>
 
@@ -97,7 +97,7 @@ const Contact = () => {
                   <h3 className="font-semibold text-gray-700">Phone</h3>
                   <p className="text-gray-600 mt-1">
                     Support: +91 90543 09266<br />
-                    Customer Service: +91 6353112888
+                    Customer Service: +91 90543 09266
                   </p>
                 </div>
               </div>
@@ -107,9 +107,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-gray-700">Email</h3>
                   <p className="text-gray-600 mt-1">
-                    General Inquiries: info@prescripto.com<br />
-                    Support: support@prescripto.com<br />
-                    Careers: careers@prescripto.com
+                    General Inquiries: info@sanjivani.com<br />
+                    Support: support@sanjivani.com<br />
+                    Careers: careers@sanjivani.com
                   </p>
                 </div>
               </div>
@@ -138,7 +138,7 @@ const Contact = () => {
                 <CheckCircle className="mx-auto text-green-500 mb-4" size={48} />
                 <h3 className="text-xl font-bold text-green-700 mb-2">Message Sent Successfully!</h3>
                 <p className="text-green-600">
-                  Thank you for contacting Prescripto. Our team will get back to you shortly.
+                  Thank you for contacting Sanjivni. Our team will get back to you shortly.
                 </p>
               </div>
             ) : (
@@ -149,7 +149,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
               >
                 {/* FormSubmit Configuration */}
-                <input type="hidden" name="_subject" value="New Prescripto Contact Form Submission" />
+                <input type="hidden" name="_subject" value="New Sanjivani Contact Form Submission" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
                 <input type="text" name="_honey" style={{ display: 'none' }} />

@@ -349,7 +349,7 @@ const Medicines = () => {
   return (
     <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6">
       <SEO
-        title="Medicines - Browse and Search Medications | Prescripto"
+        title="Medicines - Browse and Search Medications | Sanjivni"
         description="Search and browse through our extensive database of medications. Find information about dosage, side effects, and availability."
         keywords="medicines, medications, pharmacy, drugs, prescriptions, healthcare, medicine search"
         canonicalUrl="/medicines"

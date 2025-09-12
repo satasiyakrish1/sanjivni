@@ -294,7 +294,7 @@ const Doctors = () => {
       // Create share data for Web Share API
       const shareData = {
         title: `Dr. ${doctor.name} - ${doctor.speciality}`,
-        text: `Check out Dr. ${doctor.name}, a ${doctor.speciality} on Prescripto!`,
+        text: `Check out Dr. ${doctor.name}, a ${doctor.speciality} on Sanjivni!`,
         url: `${window.location.origin}/appointment/${doctor._id}`
       };
 
@@ -366,13 +366,13 @@ const Doctors = () => {
 
   // Customize SEO title based on speciality
   const seoTitle = speciality
-    ? `${speciality} Specialists - Find and Book Appointments | Prescripto`
-    : 'Find Doctors - Book Appointments with Specialists | Prescripto';
+    ? `${speciality} Specialists - Find and Book Appointments | Sanjivni`
+    : 'Find Doctors - Book Appointments with Specialists | Sanjivni';
 
   // Customize SEO description based on speciality
   const seoDescription = speciality
-    ? `Book appointments with trusted ${speciality} specialists. Find the best ${speciality} doctors near you with Prescripto.`
-    : 'Find and book appointments with trusted doctors and specialists. Browse by speciality and location with Prescripto.';
+    ? `Book appointments with trusted ${speciality} specialists. Find the best ${speciality} doctors near you with Sanjivni.`
+    : 'Find and book appointments with trusted doctors and specialists. Browse by speciality and location with Sanjivni.';
 
   const specialties = [
     'General physician',

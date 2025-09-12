@@ -9,7 +9,7 @@ const Team = () => {
     {
       name: 'Krish Satasiya',
       role: 'Founder & CEO',
-      bio: 'Visionary healthcare technologist with a passion for making healthcare accessible to all. Founded Prescripto to bridge the gap between patients and healthcare providers.',
+      bio: 'Visionary health technologist passionate about natural wellness. Founded Sanjivani to bridge the gap between people and trusted herbal guidance.',
       image: about_image
     },
     {
@@ -24,25 +24,25 @@ const Team = () => {
     {
       name: 'Neha Satasiya',
       role: 'Chief Technology Officer',
-      bio: 'Tech innovator with expertise in healthcare software development. Oversees the technical architecture and implementation of Prescripto\'s platform.',
+      bio: 'Tech innovator with expertise in health software. Oversees the technical architecture and implementation of Sanjivni\'s platform.',
       image: assets.doc3
     },
     {
       name: 'Drx. Vaibhav Satasiya',
       role: 'Head of Product',
-      bio: 'Product strategist focused on creating intuitive healthcare solutions. Leads the product roadmap and user experience design at Prescripto.',
+      bio: 'Product strategist focused on intuitive natural wellness solutions. Leads the product roadmap and user experience design at Sanjivni.',
       image: assets.doc4
     },
     {
       name: 'Dr. Vikram Singh',
       role: 'Medical Advisor',
-      bio: 'Specialist in digital health integration. Provides clinical guidance to ensure Prescripto meets the highest standards of medical care.',
+      bio: 'Specialist in integrative health. Provides guidance to ensure Sanjivani meets high standards of safety and reliability.',
       image: assets.doc5
     },
     {
       name: 'Divya Prajapati',
       role: 'Head of Operations',
-      bio: 'Operations expert with a background in healthcare management. Ensures smooth day-to-day functioning of all Prescripto services.',
+      bio: 'Operations expert with a background in health operations. Ensures smooth day-to-day functioning of all Sanjivani services.',
       image: assets.doc6
     }
   ]
@@ -52,21 +52,21 @@ const Team = () => {
     {
       year: '2024',
       title: 'API & Service Marketplace',
-      description: 'Launched the API Marketplace to enable third-party developers to build on the Prescripto platform, fostering innovation in healthcare technology solutions.'
+      description: 'Launched the API Marketplace to enable developers to build on the Sanjivani platform, fostering innovation in natural wellness solutions.'
     },
     {
       year: '2025',
       title: 'Looking Forward',
-      description: 'Prescripto continues to evolve with a focus on AI-driven healthcare solutions, telemedicine advancements, and expanding access to underserved communities across India.'
+      description: 'Sanjivani continues to evolve with a focus on AI-driven natural wellness solutions and expanding access to trusted herbal guidance.'
     }
   ]
 
   return (
     <div className="px-4 sm:px-6">
       <SEO 
-        title="Our Team & Journey - Prescripto"
-        description="Meet the founders and team behind Prescripto and learn about our journey to revolutionize healthcare access in India."
-        keywords="Prescripto team, healthcare founders, medical technology team, healthcare journey, health tech startup"
+        title="Our Team & Journey - Sanjivni"
+        description="Meet the founders and team behind Sanjivani and learn about our journey to bring AI-powered herbal guidance to everyone."
+        keywords="Sanjivani team, herbal remedy founders, ai health team, natural wellness startup"
         canonicalUrl="/team"
       />
 
@@ -77,7 +77,7 @@ const Team = () => {
         </h1>
         <div className="w-20 h-1 bg-primary mx-auto mb-4"></div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Meet the dedicated professionals behind Prescripto and learn about our mission to transform healthcare accessibility in India.
+          Meet the dedicated professionals behind Sanjivani and learn about our mission to make natural wellness accessible with AI.
         </p>
       </div>
 
@@ -155,7 +155,7 @@ const Team = () => {
       <div className="mb-16 bg-gradient-to-r from-primary/5 to-primary/10 p-8 rounded-lg max-w-6xl mx-auto">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Our Vision for the Future</h2>
         <p className="text-gray-600 text-center max-w-3xl mx-auto">
-          At Prescripto, we envision a future where quality healthcare is accessible to everyone, regardless of location or socioeconomic status. We are committed to leveraging technology to create innovative solutions that address the unique challenges of healthcare delivery in India and beyond. Our journey continues as we work towards building a healthier, more connected world.
+          At Sanjivni, we envision a future where safe, effective herbal guidance is accessible to everyone. We are committed to leveraging AI to create intuitive solutions that support everyday wellness choices.
         </p>
       </div>
 

@@ -155,7 +155,7 @@ const Verification = () => {
                 key: razorpayKeyId,
                 amount: response.data.order.amount,
                 currency: response.data.order.currency || 'INR',
-                name: 'Prescripto',
+                name: 'Sanjivni',
                 description: `${selectedPlan.name} - Profile Verification`,
                 order_id: response.data.order.id,
                 handler: function(paymentResponse) {
