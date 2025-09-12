@@ -1,6 +1,6 @@
 const express = require('express');
 const { getHerbalRemedyHandler } = require('../controllers/herbalRemedyController');
-const { validateRequest } = require('../middleware/validation');
+const { validateRequest, herbalRemedyValidationRules } = require('../middleware/validation');
 const { rateLimit } = require('express-rate-limit');
 const { RATE_LIMIT_WINDOW_MS, RATE_LIMIT_MAX } = require('../config/config');
 
@@ -24,7 +24,7 @@ router.get('/health', (req, res) => {
   });
 });
 
-// Herbal remedy endpoint with rate limiting
-router.post('/herbal-remedy', apiLimiter, validateRequest, getHerbalRemedyHandler);
+// Herbal remedy endpoint with rate limiting and validation
+router.post('/herbal-remedy', apiLimiter, herbalRemedyValidationRules, validateRequest, getHerbalRemedyHandler);
 
 module.exports = router;

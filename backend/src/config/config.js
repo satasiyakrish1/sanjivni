@@ -12,20 +12,30 @@ const config = {
   // CORS configuration
   CORS_ORIGINS: process.env.CORS_ORIGINS 
     ? process.env.CORS_ORIGINS.split(',') 
-    : ['http://localhost:3000', 'http://127.0.0.1:3000'],
+    : ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:5173', 'http://127.0.0.1:5173'],
   
-  // Google AI Configuration
-  GOOGLE_AI_API_KEY: process.env.GOOGLE_AI_API_KEY || '',
+  // OpenAI Configuration
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY || '',
+
+  // Google AI (Gemini) Configuration
+  GOOGLE_API_KEY: process.env.GOOGLE_API_KEY || '',
   
   // Rate limiting
   RATE_LIMIT_WINDOW_MS: 15 * 60 * 1000, // 15 minutes
   RATE_LIMIT_MAX: 100, // Limit each IP to 100 requests per windowMs
 };
 
-// Validate required configurations
-if (!config.GOOGLE_AI_API_KEY) {
-  console.error('FATAL ERROR: GOOGLE_AI_API_KEY is not defined');
-  process.exit(1);
+// Log configuration status
+if (!config.OPENAI_API_KEY) {
+  console.warn('WARNING: OPENAI_API_KEY is not defined - OpenAI provider disabled');
+} else {
+  console.log('OpenAI API key configured');
+}
+
+if (!config.GOOGLE_API_KEY) {
+  console.warn('WARNING: GOOGLE_API_KEY is not defined - Google Gemini provider disabled');
+} else {
+  console.log('Google Gemini API key configured');
 }
 
 module.exports = config;

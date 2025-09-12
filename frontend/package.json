@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@google/generative-ai": "^0.24.1",
     "@headlessui/react": "^2.2.0",
     "@lottiefiles/dotlottie-react": "^0.13.3",
     "@lottiefiles/react-lottie-player": "^3.6.0",

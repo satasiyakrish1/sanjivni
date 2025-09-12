@@ -11,9 +11,24 @@ const app = express();
 // Security middleware
 app.use(helmet());
 
-// Enable CORS with specific origins
+// Enable CORS with specific origins including Vercel subdomains
 app.use(cors({
-  origin: CORS_ORIGINS,
+  origin: (origin, callback) => {
+    if (!origin) {
+      return callback(null, true);
+    }
+    try {
+      const hostname = new URL(origin).hostname;
+      const isAllowed =
+        CORS_ORIGINS.includes(origin) ||
+        hostname === 'localhost' ||
+        hostname === '127.0.0.1' ||
+        hostname.endsWith('.vercel.app');
+      return callback(isAllowed ? null : new Error('Not allowed by CORS'), isAllowed);
+    } catch (e) {
+      return callback(new Error('Invalid origin'));
+    }
+  },
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -26,6 +41,15 @@ if (process.env.NODE_ENV !== 'test') {
 
 // Parse JSON bodies
 app.use(express.json({ limit: '10kb' }));
+
+// Root health check for platforms that route root to the function
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Herbal AI API is running',
+    timestamp: new Date().toISOString()
+  });
+});
 
 // API routes
 app.use('/api', apiRoutes);

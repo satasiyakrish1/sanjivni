@@ -7,6 +7,7 @@ import SEO from '../components/SEO'
 import StatisticsSection from '../components/StatisticsSection'
 import HealthTips from '../components/HealthTips'
 import HerbalRemedySearch from '../components/HerbalRemedySearch'
+import ConnectionTroubleshooter from '../components/ConnectionTroubleshooter'
 
 const Home = () => {
   return (
@@ -37,16 +38,16 @@ const Home = () => {
           </div>
         </div>
         
-        <SpecialityMenu />
-        <TopDoctors />
+        
         <div id="statistics">
           <StatisticsSection />
         </div>
         
-
+        
         <HealthTips />
         <Banner />
       </div>
+      <ConnectionTroubleshooter />
     </div>
   )
 }
