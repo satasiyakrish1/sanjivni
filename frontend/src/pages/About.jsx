@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <SEO
-        title="About Sanjivani – AI-Powered Herbal Remedy Finder"
+        title="About Sanjivani AI – AI-Powered Herbal Remedy Finder"
         description="Learn about Sanjivni, the AI-powered platform that blends Ayurvedic wisdom with modern AI to suggest safe, effective herbal remedies tailored to your symptoms."
         keywords="about sanjivni, herbal remedies, ayurveda, ai health, natural remedies, symptom checker"
         canonicalUrl="/about"
@@ -27,7 +27,7 @@ const About = () => {
           <img
             className="w-full rounded-lg shadow-lg"
             src={assets.about_image}
-            alt="Sanjivani Platform"
+            alt="Sanjivani AI Platform"
           />
         </div>
         <div className="lg:w-1/2 flex flex-col justify-center gap-6">
@@ -41,7 +41,7 @@ const About = () => {
 
           <h2 className="text-3xl font-bold text-gray-800 mt-6">Our Vision</h2>
           <p className="text-gray-600">
-            Our vision with Sanjivani is to make natural wellness accessible, understandable, and personalized for everyone.
+            Our vision with Sanjivani AI is to make natural wellness accessible, understandable, and personalized for everyone.
           </p>
           <p className="text-gray-600">
             We envision a world where healthcare is accessible, affordable, and personalized for everyone, regardless of location or circumstance.

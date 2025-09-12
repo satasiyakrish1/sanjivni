@@ -46,10 +46,10 @@ const Footer = () => {
         <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
           {/* Company Info */}
           <div>
-            <img className="mb-5 w-40" src={assets.logo} alt="Sanjivani Logo" />
+            <img className="mb-5 w-40" src={assets.logo} alt="Sanjivani AI Logo" />
             <p className="w-full md:w-2/3 text-gray-600 leading-6">
-            Sanjivani is an AI-powered herbal remedy finder that helps you discover natural 
-            solutions for your health. By simply entering your symptoms, Sanjivani instantly suggests the best herbal and Ayurvedic remedies tailored to your needs.
+            Sanjivani AI is an AI-powered herbal remedy finder that helps you discover natural 
+            solutions for your health. By simply entering your symptoms, Sanjivani AI instantly suggests the best herbal and Ayurvedic remedies tailored to your needs.
             </p>
             {/* Social Media Icons */}
 
@@ -143,7 +143,7 @@ const Footer = () => {
         <div>
           <hr />
           <div className="flex flex-col sm:flex-row items-center justify-between py-5 text-sm">
-            <p className="text-left w-full sm:w-auto">Copyright {currentYear} @Team Sanjivani - All Right Reserved.</p>
+            <p className="text-left w-full sm:w-auto">Copyright {currentYear} @Team Sanjivani AI - All Right Reserved.</p>
             <a href="/sitemap" className="mt-2 sm:mt-0 inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded hover:bg-blue-200 transition">Site Map</a>
           </div>
         </div>

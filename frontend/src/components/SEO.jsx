@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({
-  title = 'Sanjivani – AI-Powered Herbal Remedy Finder',
-  description = 'Sanjivani is an AI-powered herbal remedy finder that helps you discover natural solutions for your health. By simply entering your symptoms, Sanjivani instantly suggests the best herbal and Ayurvedic remedies tailored to your needs. Combining the wisdom of traditional herbal medicine with modern AI technology, Sanjivani makes it easy to find safe, effective, and natural treatments for common health concerns. Whether you are looking for Ayurveda-based remedies, home herbal solutions, or natural symptom checkers, Sanjivani is your go-to platform for smarter, healthier living.',
+  title = 'Sanjivani AI – AI-Powered Herbal Remedy Finder',
+  description = 'Sanjivani AI is an AI-powered herbal remedy finder that helps you discover natural solutions for your health. By simply entering your symptoms, Sanjivani AI instantly suggests the best herbal and Ayurvedic remedies tailored to your needs. Combining the wisdom of traditional herbal medicine with modern AI technology, Sanjivani AI makes it easy to find safe, effective, and natural treatments for common health concerns. Whether you are looking for Ayurveda-based remedies, home herbal solutions, or natural symptom checkers, Sanjivani AI is your go-to platform for smarter, healthier living.',
   keywords = 'Sanjivni, herbal remedies, Ayurveda, ayurvedic, natural remedies, symptom checker, herbal medicine, AI health, home remedies, herbal remedy finder, natural treatments',
   canonicalUrl,
   ogType = 'website',

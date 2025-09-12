@@ -4,22 +4,22 @@ import SEO from '../components/SEO';
 const faqs = [
   {
     question: 'What is Sanjivni?',
-    answer: 'Sanjivani is an AI-powered herbal remedy finder that suggests natural and Ayurvedic remedies based on your symptoms, combining traditional herbal wisdom with modern AI.'
+    answer: 'Sanjivani AI is an AI-powered herbal remedy finder that suggests natural and Ayurvedic remedies based on your symptoms, combining traditional herbal wisdom with modern AI.'
   },
   {
-    question: 'How does Sanjivani work?',
+    question: 'How does Sanjivani AI work?',
     answer: 'Enter your symptoms and our AI analyzes them to recommend safe, effective herbal and Ayurveda-based remedies tailored to your needs. We also provide usage tips and cautions where applicable.'
   },
   {
-    question: 'Is Sanjivani a substitute for a doctor?',
-    answer: 'No. Sanjivani is for educational purposes and general wellness guidance. It is not a medical diagnosis tool. Always consult a qualified healthcare professional for serious or persistent conditions.'
+    question: 'Is Sanjivani AI a substitute for a doctor?',
+    answer: 'No. Sanjivani AI is for educational purposes and general wellness guidance. It is not a medical diagnosis tool. Always consult a qualified healthcare professional for serious or persistent conditions.'
   },
   {
     question: 'Are the remedies safe for everyone?',
     answer: 'Herbal remedies may interact with medications or not be suitable for certain conditions (e.g., pregnancy, chronic illnesses). Review cautions and consult your doctor if unsure before using any remedy.'
   },
   {
-    question: 'Which symptoms does Sanjivani support?',
+    question: 'Which symptoms does Sanjivani AI support?',
     answer: 'Common everyday issues such as cough, cold, sore throat, indigestion, mild headaches, skin concerns and more. We are continuously expanding coverage.'
   },
   {
@@ -27,7 +27,7 @@ const faqs = [
     answer: 'We only process the inputs needed to generate suggestions and follow industry-standard security practices. Avoid sharing personally identifiable or sensitive medical information.'
   },
   {
-    question: 'Is Sanjivani free to use?',
+    question: 'Is Sanjivani AI free to use?',
     answer: 'Yes, core features are free. Some advanced features may require verification or future premium plans.'
   },
   {
@@ -78,7 +78,7 @@ const Faq = () => {
 
       <div className="max-w-3xl mx-auto py-16 px-4">
         <h1 className="text-4xl font-bold text-primary mb-4 text-center">Frequently Asked Questions</h1>
-        <p className="text-gray-600 mb-10 text-center">Find answers about using Sanjivani for AI-powered herbal and Ayurvedic remedies.</p>
+        <p className="text-gray-600 mb-10 text-center">Find answers about using Sanjivani AI for AI-powered herbal and Ayurvedic remedies.</p>
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
             <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">

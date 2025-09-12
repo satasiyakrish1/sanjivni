@@ -9,7 +9,7 @@ const Team = () => {
     {
       name: 'Krish Satasiya',
       role: 'Founder & CEO',
-      bio: 'Visionary health technologist passionate about natural wellness. Founded Sanjivani to bridge the gap between people and trusted herbal guidance.',
+      bio: 'Visionary health technologist passionate about natural wellness. Founded Sanjivani AI to bridge the gap between people and trusted herbal guidance.',
       image: about_image
     },
     {
@@ -36,13 +36,13 @@ const Team = () => {
     {
       name: 'Dr. Vikram Singh',
       role: 'Medical Advisor',
-      bio: 'Specialist in integrative health. Provides guidance to ensure Sanjivani meets high standards of safety and reliability.',
+      bio: 'Specialist in integrative health. Provides guidance to ensure Sanjivani AI meets high standards of safety and reliability.',
       image: assets.doc5
     },
     {
       name: 'Divya Prajapati',
       role: 'Head of Operations',
-      bio: 'Operations expert with a background in health operations. Ensures smooth day-to-day functioning of all Sanjivani services.',
+      bio: 'Operations expert with a background in health operations. Ensures smooth day-to-day functioning of all Sanjivani AI services.',
       image: assets.doc6
     }
   ]
@@ -52,12 +52,12 @@ const Team = () => {
     {
       year: '2024',
       title: 'API & Service Marketplace',
-      description: 'Launched the API Marketplace to enable developers to build on the Sanjivani platform, fostering innovation in natural wellness solutions.'
+      description: 'Launched the API Marketplace to enable developers to build on the Sanjivani AI platform, fostering innovation in natural wellness solutions.'
     },
     {
       year: '2025',
       title: 'Looking Forward',
-      description: 'Sanjivani continues to evolve with a focus on AI-driven natural wellness solutions and expanding access to trusted herbal guidance.'
+      description: 'Sanjivani AI continues to evolve with a focus on AI-driven natural wellness solutions and expanding access to trusted herbal guidance.'
     }
   ]
 
@@ -65,8 +65,8 @@ const Team = () => {
     <div className="px-4 sm:px-6">
       <SEO 
         title="Our Team & Journey - Sanjivni"
-        description="Meet the founders and team behind Sanjivani and learn about our journey to bring AI-powered herbal guidance to everyone."
-        keywords="Sanjivani team, herbal remedy founders, ai health team, natural wellness startup"
+        description="Meet the founders and team behind Sanjivani AI and learn about our journey to bring AI-powered herbal guidance to everyone."
+        keywords="Sanjivani AI team, herbal remedy founders, ai health team, natural wellness startup"
         canonicalUrl="/team"
       />
 
@@ -77,7 +77,7 @@ const Team = () => {
         </h1>
         <div className="w-20 h-1 bg-primary mx-auto mb-4"></div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Meet the dedicated professionals behind Sanjivani and learn about our mission to make natural wellness accessible with AI.
+          Meet the dedicated professionals behind Sanjivani AI and learn about our mission to make natural wellness accessible with AI.
         </p>
       </div>
 

@@ -113,7 +113,7 @@ const HerbalRemedySearch = () => {
                 value={symptoms}
                 onChange={(e) => setSymptoms(e.target.value)}
                 placeholder="Example: I've been experiencing headaches and fatigue for the past few days. I also have trouble sleeping at night."
-                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none"
+                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary/60 transition-all duration-200 resize-none"
                 disabled={isLoading}
                 aria-label="Describe your symptoms"
               />
@@ -142,7 +142,7 @@ const HerbalRemedySearch = () => {
               className={`flex-1 flex items-center justify-center px-6 py-3 rounded-lg font-medium text-white transition-all ${
                 isLoading || !symptoms.trim()
                   ? 'bg-gray-300 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
+                  : 'bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
               }`}
             >
               {isLoading ? (
@@ -186,22 +186,11 @@ const HerbalRemedySearch = () => {
           <div ref={resultRef} className="mt-8 transition-all duration-300 ease-in-out">
             <AIResponse content={remedy} title="Your Personalized Herbal Remedy" />
             <div className="mt-6">
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <svg className="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="text-sm font-medium text-blue-800">Note</h4>
-                    <div className="mt-1 text-sm text-blue-700">
-                      <p>
-                        These suggestions are informational and not a medical diagnosis.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 text-center">
+                <h4 className="text-sm font-medium text-blue-800">Note</h4>
+                <p className="mt-1 text-sm text-blue-700">
+                  These suggestions are informational and not a medical diagnosis.
+                </p>
               </div>
             </div>
           </div>

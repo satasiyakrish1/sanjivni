@@ -50,8 +50,8 @@ const Contact = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <SEO
-        title="Contact Sanjivani - Get in Touch With Our Team"
-        description="Have questions or need assistance? Contact the Sanjivani team for support with herbal remedies, appointments, medicines, or any other needs."
+        title="Contact Sanjivani AI - Get in Touch With Our Team"
+        description="Have questions or need assistance? Contact the Sanjivani AI team for support with herbal remedies, appointments, medicines, or any other needs."
         keywords="contact prescripto, healthcare support, customer service, help, contact us, healthcare assistance"
         canonicalUrl="/contact"
       />
@@ -72,7 +72,7 @@ const Contact = () => {
             <img
               className="w-full"
               src={assets.about}
-              alt="Sanjivani Contact Support"
+              alt="Sanjivani AI Contact Support"
             />
           </div>
 
@@ -149,7 +149,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
               >
                 {/* FormSubmit Configuration */}
-                <input type="hidden" name="_subject" value="New Sanjivani Contact Form Submission" />
+                <input type="hidden" name="_subject" value="New Sanjivani AI Contact Form Submission" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
                 <input type="text" name="_honey" style={{ display: 'none' }} />

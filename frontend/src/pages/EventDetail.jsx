@@ -402,7 +402,7 @@ const EventDetail = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO 
-        title={`${event.title} | Sanjivani Events`} 
+        title={`${event.title} | Sanjivani AI Events`} 
         description={event.description.substring(0, 160)} 
       />
       

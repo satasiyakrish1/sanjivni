@@ -69,12 +69,12 @@ const Terms = () => {
 
             <h2 className="text-lg font-semibold">7. Intellectual Property</h2>
             <p>
-              All content and materials available on Sanjivani are protected by intellectual property rights. You may not use, reproduce, or distribute our content without authorization.
+              All content and materials available on Sanjivani AI are protected by intellectual property rights. You may not use, reproduce, or distribute our content without authorization.
             </p>
 
             <h2 className="text-lg font-semibold">8. Limitation of Liability</h2>
             <p>
-              To the maximum extent permitted by law, Sanjivani and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service.
+              To the maximum extent permitted by law, Sanjivani AI and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service.
             </p>
 
             <h2 className="text-lg font-semibold">9. Privacy</h2>
