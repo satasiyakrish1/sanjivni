@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="10" fill="#F5F5F5"/>
+  <circle cx="100" cy="80" r="40" stroke="#EF4444" stroke-width="4" fill="none"/>
+  <path d="M100 60V100" stroke="#EF4444" stroke-width="6" stroke-linecap="round"/>
+  <path d="M80 80H120" stroke="#EF4444" stroke-width="6" stroke-linecap="round"/>
+  <path d="M70 130H130" stroke="#EF4444" stroke-width="4"/>
+  <path d="M80 130V150" stroke="#EF4444" stroke-width="4"/>
+  <path d="M120 130V150" stroke="#EF4444" stroke-width="4"/>
+  <text x="50" y="180" font-family="Arial" font-size="14" fill="#EF4444">Life Care</text>
+</svg>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://krishsatasiya-prescriptosystem.onrender.com/sitemap.xml
+Host: https://krishsatasiya-prescriptosystem.onrender.com
