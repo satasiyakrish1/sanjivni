@@ -1,4 +1,5 @@
 import React, { useMemo, useRef, useState } from 'react';
+import { API_URL } from '../utils/constants';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -100,9 +101,12 @@ const AIResponse = ({ content = '', title = 'AI Result' }) => {
     try {
       setTranslateError('');
       setIsTranslating(true);
-      const encoded = encodeURIComponent(content);
-      const url = `/api/translate?source=auto&target=${encodeURIComponent(target)}&text=${encoded}`;
-      const res = await fetch(url, { method: 'GET' });
+      const base = API_URL || '';
+      const res = await fetch(`${base}/api/translate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ source: 'auto', target, text: content })
+      });
       if (!res.ok) throw new Error('Translation failed');
       const data = await res.json();
       const translated = data?.translation || '';

@@ -75,10 +75,10 @@ async function checkIfHealthRelated(text) {
   if (!googleGenAI) return true; // let it pass if no key
   try {
     const prompt = HEALTH_RELATED_PROMPT.replace('{text}', text);
-    const model = googleGenAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-    const result = await model.generateContent([{ text: prompt }]);
-    const answer = result?.response?.text?.().trim().toLowerCase() || 'yes';
-    return answer.startsWith('yes');
+  const model = googleGenAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const result = await model.generateContent([{ text: prompt }]);
+  const answer = result?.response?.text?.().trim().toLowerCase() || 'yes';
+        return answer.startsWith('yes');
   } catch (err) {
     if (isQuotaOrRateLimitError(err)) {
       // On quota/rate limit issues, allow the request to proceed rather than failing hard
@@ -99,17 +99,17 @@ async function generateHerbalRemedy(symptoms) {
     return stripIrrelevantSections(symptoms, fallback);
   }
   try {
-    const sanitized = symptoms.replace(/[\n\r\t]/g, ' ').substring(0, 1000);
-    const model = googleGenAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
-    const result = await model.generateContent([{ text: HERBAL_REMEDY_PROMPT.replace('{symptoms}', sanitized) }]);
-    let text = result?.response?.text?.() || '';
-    text = stripIrrelevantSections(symptoms, text);
-    if (!text || text.length < 40) {
+  const sanitized = symptoms.replace(/[\n\r\t]/g, ' ').substring(0, 1000);
+  const model = googleGenAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+  const result = await model.generateContent([{ text: HERBAL_REMEDY_PROMPT.replace('{symptoms}', sanitized) }]);
+  let text = result?.response?.text?.() || '';
+  text = stripIrrelevantSections(symptoms, text);
+  if (!text || text.length < 40) {
       // If model returns too little, fallback gracefully
       const fallback = generateFallbackHerbalRemedy(symptoms);
       return stripIrrelevantSections(symptoms, fallback);
-    }
-    return text;
+  }
+  return text;
   } catch (err) {
     if (isQuotaOrRateLimitError(err)) {
       const fallback = generateFallbackHerbalRemedy(symptoms);

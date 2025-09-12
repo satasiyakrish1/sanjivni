@@ -53,4 +53,28 @@ router.get('/translate', apiLimiter, async (req, res) => {
   }
 });
 
+// POST translation (preferred for long texts)
+router.post('/translate', apiLimiter, async (req, res) => {
+  try {
+    const body = req.body || {};
+    const source = (body.source || 'auto').toString();
+    const target = (body.target || '').toString();
+    const text = (body.text || '').toString();
+
+    if (!target) {
+      return res.status(400).json({ error: 'Missing target language code' });
+    }
+    if (!text) {
+      return res.status(400).json({ error: 'Missing text to translate' });
+    }
+
+    const result = await translate(text, { from: source, to: target });
+    return res.status(200).json({ translation: result?.text || '' });
+  } catch (err) {
+    const status = err?.response?.status || 500;
+    const errorMessage = err?.response?.data?.error || 'Translation service error';
+    return res.status(status >= 400 && status < 600 ? status : 500).json({ error: errorMessage });
+  }
+});
+
 module.exports = router;
