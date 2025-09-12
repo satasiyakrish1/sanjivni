@@ -72,6 +72,20 @@ async function checkIfHealthRelated(text) {
   if (!text || typeof text !== 'string' || text.trim().length === 0) {
     throw new ApiError(400, 'Invalid input text for health check');
   }
+  const lower = text.toLowerCase();
+  const disallowed = [
+    /\b(api\s*key|secret\s*key|private\s*key|token|password|credentials|otp|credit\s*card|cvv|bank|upi|wallet|crypto)\b/i,
+    /\b(socket|webpack|react|javascript|python|java|nodejs|npm|yarn|git|github|docker|kubernetes|sql|mongodb|firebase)\b/i,
+    /\b(algorithm|code\b|coding|program\w*|compile|debug)\b/i,
+    /\b(homework|assignment|exam\b|test\b)\b/i,
+    /\b(hack|exploit|bypass|jailbreak|crack)\b/i
+  ];
+  if (disallowed.some((r) => r.test(lower))) {
+    return false;
+  }
+  if (/\b(give|share|send|tell)\b.*\b(key|token|password|credentials)\b/i.test(lower)) {
+    return false;
+  }
   if (!googleGenAI) return true; // let it pass if no key
   try {
     const prompt = HEALTH_RELATED_PROMPT.replace('{text}', text);
