@@ -25,7 +25,7 @@ Consider symptoms, pain, discomfort, or any health concerns.
 Respond with 'yes' if health-related, 'no' otherwise.\n\nText: "{text}"`;
 
 const HERBAL_REMEDY_PROMPT = `You are an expert in herbal medicine and natural remedies. 
-Create a concise, user-tailored herbal remedy plan for these symptoms: "{symptoms}"
+Create a concise yet rich, user-tailored herbal remedy plan for these symptoms: "{symptoms}"
 
 Rules:
 - OUTPUT MUST BE MARKDOWN
@@ -36,15 +36,18 @@ Rules:
 Suggested structure (use only those that apply):
 
 ### 🌿 Recommended Herbs
-- 3–5 herbs with brief rationale (include scientific names in italics)
+- 5–8 herbs with brief rationale (include scientific names in italics)
 
 ### 🍵 Preparation Methods
-- Tea/Infusion (measurements + steps)
+- Tea/Infusion (precise measurements + numbered steps)
 - Tincture (if appropriate)
 - Topical application (ONLY if clearly relevant to the symptoms)
 
+### 🗓️ Daily Schedule
+- 3–5 concise bullet points mapping herbs to times of day
+
 ### 📋 Specific Instructions
-- 3–6 targeted, practical steps tailored to the described symptoms
+- 6–10 targeted, practical steps tailored to the described symptoms
 
 Keep it focused, specific, and safety-conscious but concise.`;
 
@@ -142,6 +145,7 @@ function generateFallbackHerbalRemedy(symptoms) {
   // Deterministic hash to vary selections per different inputs
   const hash = Array.from(text).reduce((acc, ch) => (acc * 31 + ch.charCodeAt(0)) >>> 0, 7);
   const pickByHash = (arr, offset = 0) => arr[(hash + offset) % arr.length];
+  const normalizeHerbName = (label) => (label || '').split('(')[0].trim().toLowerCase();
 
   // Categories with multiple options for variety
   const categories = [
@@ -151,7 +155,9 @@ function generateFallbackHerbalRemedy(symptoms) {
       options: [
         { herb: 'Tulsi (Ocimum sanctum)', why: 'traditionally used for respiratory comfort and throat soothing', prep: 'Infusion: 1–2 tsp dried leaves in 250 ml hot water, steep 8–10 min; add ginger and honey when warm.' },
         { herb: 'Mulethi/Licorice (Glycyrrhiza glabra)', why: 'demulcent properties may ease throat irritation', prep: 'Decoction: 1 tsp shredded root simmered 10–12 min in 250 ml water.' },
-        { herb: 'Thyme (Thymus vulgaris)', why: 'aromatic herb used for chest comfort', prep: 'Infusion: 1 tsp dried thyme, steep 7–9 min; inhale vapors and sip warm.' }
+        { herb: 'Thyme (Thymus vulgaris)', why: 'aromatic herb used for chest comfort', prep: 'Infusion: 1 tsp dried thyme, steep 7–9 min; inhale vapors and sip warm.' },
+        { herb: 'Adulsa/Vasaka (Justicia adhatoda)', why: 'traditionally used for productive cough', prep: 'Decoction: 1 tsp dried leaves simmered 8–10 min; sip warm.' },
+        { herb: 'Elderflower (Sambucus nigra)', why: 'used for nasal comfort and sweating support', prep: 'Infusion: 1–2 tsp flowers steeped 8–10 min.' }
       ]
     },
     {
@@ -160,7 +166,9 @@ function generateFallbackHerbalRemedy(symptoms) {
       options: [
         { herb: 'Peppermint (Mentha × piperita)', why: 'may support digestion and ease gas/bloating', prep: 'Infusion: 1 tsp dried leaves in 250 ml hot water, steep 7–9 min.' },
         { herb: 'Fennel (Foeniculum vulgare)', why: 'traditionally chewed after meals for post‑prandial heaviness', prep: 'Chew 1/2–1 tsp seeds after meals or steep as tea 8–10 min.' },
-        { herb: 'Ginger (Zingiber officinale)', why: 'warming carminative for nausea and sluggish digestion', prep: 'Decoction: 4–5 thin slices simmered 8–10 min; add lemon/honey.' }
+        { herb: 'Ginger (Zingiber officinale)', why: 'warming carminative for nausea and sluggish digestion', prep: 'Decoction: 4–5 thin slices simmered 8–10 min; add lemon/honey.' },
+        { herb: 'Ajwain/Carom (Trachyspermum ammi)', why: 'traditional carminative for gas and cramps', prep: 'Infusion: 1/2 tsp seeds crushed; steep 7–9 min.' },
+        { herb: 'Coriander seed (Coriandrum sativum)', why: 'cooling digestive support', prep: 'Infusion: 1 tsp lightly crushed seeds; steep 8–10 min.' }
       ]
     },
     {
@@ -169,7 +177,9 @@ function generateFallbackHerbalRemedy(symptoms) {
       options: [
         { herb: 'Ashwagandha (Withania somnifera)', why: 'adaptogenic support for stress resilience and sleep quality', prep: 'Powder: 1/4–1/2 tsp in warm milk/water at night.' },
         { herb: 'Chamomile (Matricaria chamomilla)', why: 'gentle calming herb before bedtime', prep: 'Infusion: 1–2 tsp flowers in 250 ml hot water, steep 8–10 min.' },
-        { herb: 'Lavender (Lavandula angustifolia)', why: 'aromatic relaxation support', prep: 'Infusion: 1 tsp flowers steeped 5–7 min; or inhale aroma before sleep.' }
+        { herb: 'Lavender (Lavandula angustifolia)', why: 'aromatic relaxation support', prep: 'Infusion: 1 tsp flowers steeped 5–7 min; or inhale aroma before sleep.' },
+        { herb: 'Brahmi/Gotu Kola (Bacopa monnieri)', why: 'traditional support for calm focus', prep: 'Infusion: 1 tsp dried herb; steep 7–9 min.' },
+        { herb: 'Lemon balm (Melissa officinalis)', why: 'uplifting calm for mind and digestion', prep: 'Infusion: 1 tsp dried leaves steeped 6–8 min.' }
       ]
     },
     {
@@ -178,7 +188,9 @@ function generateFallbackHerbalRemedy(symptoms) {
       options: [
         { herb: 'Turmeric (Curcuma longa)', why: 'curcuminoids traditionally used for inflammatory discomfort', prep: 'Golden milk: 1/4 tsp powder + pinch black pepper in warm milk 1×/day.' },
         { herb: 'Willow bark (Salix alba)', why: 'salicin source traditionally used for aches', prep: 'Decoction: 1 tsp bark simmered 10–12 min; avoid if salicylate‑sensitive.' },
-        { herb: 'Ginger (Zingiber officinale)', why: 'warming herb that may support circulation and relieve aches', prep: 'Decoction: 4–5 thin slices simmered 8–10 min; add lemon/honey.' }
+        { herb: 'Ginger (Zingiber officinale)', why: 'warming herb that may support circulation and relieve aches', prep: 'Decoction: 4–5 thin slices simmered 8–10 min; add lemon/honey.' },
+        { herb: 'Nirgundi (Vitex negundo)', why: 'traditionally used topically for joint/muscle comfort', prep: 'Topical: warm leaf poultice on affected area 15–20 min.' },
+        { herb: 'Boswellia/Salai guggul (Boswellia serrata)', why: 'traditionally used for joint comfort', prep: 'Powder: 250–500 mg with warm water after meals.' }
       ]
     },
     {
@@ -187,7 +199,9 @@ function generateFallbackHerbalRemedy(symptoms) {
       options: [
         { herb: 'Neem (Azadirachta indica)', why: 'traditionally used for skin comfort and clarity', prep: 'Infusion: 1/2 tsp dried leaves steeped 5–7 min; for taste, blend with tulsi/mint.' },
         { herb: 'Calendula (Calendula officinalis)', why: 'soothing herb for irritated skin', prep: 'Infusion: 1 tsp petals steeped 7–9 min; can cool and use as gentle rinse.' },
-        { herb: 'Turmeric (Curcuma longa)', why: 'supportive for inflammatory skin discomfort', prep: 'Paste: pinch turmeric + water; apply as spot for 10–15 min, rinse.' }
+        { herb: 'Turmeric (Curcuma longa)', why: 'supportive for inflammatory skin discomfort', prep: 'Paste: pinch turmeric + water; apply as spot for 10–15 min, rinse.' },
+        { herb: 'Aloe vera (Aloe barbadensis)', why: 'cooling gel traditionally used for soothing skin', prep: 'Topical: apply fresh gel thin layer 1–2×/day.' },
+        { herb: 'Manjishtha (Rubia cordifolia)', why: 'traditional skin health support', prep: 'Decoction: 1 tsp root simmered 10 min; cool before use as rinse.' }
       ]
     }
   ];
@@ -198,15 +212,33 @@ function generateFallbackHerbalRemedy(symptoms) {
   const timeRef = durationMatch ? durationMatch[1] : null;
   const severityRef = severityMatch ? severityMatch[1] : null;
 
-  // Build personalized picks: collect up to 4 categories, and pick top 2 herbs per category for a multi‑herb plan
+  // Build personalized picks with simple scoring and cross-category herb dedupe
+  const usedNames = new Set();
   const matchedCategoryPicks = [];
-  categories.forEach((cat, idx) => {
-    if (cat.match.test(s)) {
-      // choose two distinct options per category deterministically
-      const optA = pickByHash(cat.options, idx);
-      const optB = pickByHash(cat.options.filter(o => o !== optA), idx + 13) || optA;
-      matchedCategoryPicks.push({ category: cat.key, herbs: [optA, optB] });
+  const matchScores = categories.map((cat) => {
+    let score = 0;
+    try {
+      if (cat.match && cat.match.test(s)) score += 2;
+    } catch (_) {}
+    return { cat, score };
+  }).filter(x => x.score > 0);
+
+  // Keep natural order but prioritize matched categories
+  const prioritized = categories.filter(c => matchScores.find(m => m.cat.key === c.key));
+  prioritized.slice(0, 4).forEach((cat, idx) => {
+    const picks = [];
+    // Deterministic ordering by hash
+    const ordered = cat.options.map((opt, j) => ({ opt, key: (hash + idx + j * 17) % 101 }))
+      .sort((a, b) => a.key - b.key)
+      .map(x => x.opt);
+    for (let i = 0; i < ordered.length && picks.length < 3; i++) {
+      const candidate = ordered[i];
+      const nameKey = normalizeHerbName(candidate.herb);
+      if (usedNames.has(nameKey)) continue;
+      usedNames.add(nameKey);
+      picks.push(candidate);
     }
+    if (picks.length) matchedCategoryPicks.push({ category: cat.key, herbs: picks });
   });
 
   // If no category matched, provide a general wellness set varied by hash
@@ -246,14 +278,43 @@ function generateFallbackHerbalRemedy(symptoms) {
     return `### ${title}\n${lines}\n\n**Prep**\n${preps}`;
   }).join('\n\n');
 
-  const personalizedTips = [
-    timeRef ? `- Since this has lasted ${timeRef}, be consistent with the routine for at least 5–7 days.` : null,
-    severityRef ? `- Your symptoms sound ${severityRef}. Start gently and increase only if tolerated.` : null,
-    '- Keep hydrated; avoid known triggers (spicy, very oily, or very cold foods if they worsen your symptoms).',
-    '- Track what improves or aggravates your symptoms to refine the plan.'
-  ].filter(Boolean).join('\n');
+  // Always include a General Support section with explicit steps
+  const hasGeneral = selectedCategories.some(g => g.category === 'general');
+  const generalHerbs = [
+    { herb: 'Ginger (Zingiber officinale)', why: 'broad support for digestion and general comfort', prep: 'Decoction: 4–5 thin slices simmered 8–10 min; add lemon/honey.' },
+    { herb: 'Tulsi (Ocimum sanctum)', why: 'general wellness and respiratory comfort', prep: 'Infusion: 1–2 tsp dried leaves in 250 ml hot water, steep 8–10 min.' },
+    { herb: 'Lemon balm (Melissa officinalis)', why: 'uplifting calm for mind and digestion', prep: 'Infusion: 1 tsp dried leaves steeped 6–8 min.' },
+    { herb: 'Cinnamon (Cinnamomum verum)', why: 'warming circulatory and digestive support', prep: 'Decoction: 1 small stick simmered 8–10 min.' },
+    { herb: 'Spearmint (Mentha spicata)', why: 'gentle digestive and refreshing support', prep: 'Infusion: 1 tsp dried leaves steeped 7–9 min.' }
+  ];
+  const generalHerbLines = generalHerbs.map(h => `- ${h.herb}: ${h.why}`).join('\n');
+  const generalPrepLines = generalHerbs.map(h => `- ${h.prep}`).join('\n');
+  const generalSteps = [
+    '1) Morning: Prepare a mild tulsi or ginger infusion and sip warm.',
+    '2) Midday: If needed, choose lemon balm or spearmint infusion after lunch.',
+    '3) Evening: Optional cinnamon decoction for warmth and comfort.',
+    '4) Rotate herbs daily rather than combining many at once.',
+    '5) Keep a simple log of what felt best and any sensitivities.'
+  ].join('\n');
+  const generalSection = hasGeneral
+    ? `### 🌿 General Support — Steps to Use\n${generalSteps}`
+    : `### 🌿 General Support\n${generalHerbLines}\n\n**Prep**\n${generalPrepLines}\n\n**Steps to Use**\n${generalSteps}`;
 
-  // Quick daily schedule synthesized from chosen categories
+  const personalizedTips = [
+    timeRef ? `- Since this has lasted ${timeRef}, follow the routine daily for 7–10 days before judging results.` : null,
+    severityRef ? `- Your symptoms sound ${severityRef}. Start with milder preparations; increase strength only if well tolerated.` : null,
+    '- Step 1: Prepare the first infusion fresh; do not reboil.',
+    '- Step 2: Space different herbs by at least 60–90 minutes to assess tolerance.',
+    '- Step 3: Maintain hydration; prefer warm water through the day.',
+    '- Step 4: Observe any sensitivity (rash, stomach upset); discontinue the suspected herb.',
+    '- Step 5: Keep meals light and regular to support digestion.',
+    '- Step 6: Track symptoms morning/evening to identify what helps most.'
+  ]
+  .concat(/reflux|gerd|acid/i.test(s) ? ['- If reflux is present, prefer ginger/fennel over peppermint.'] : [])
+  .concat(/insomnia|sleep|night/i.test(s) ? ['- For sleep issues, avoid stimulating herbs/aromas after sunset.'] : [])
+  .filter(Boolean).join('\n');
+
+  // Quick daily schedule synthesized from chosen categories (3–5 bullets)
   const schedule = (() => {
     const slots = [];
     selectedCategories.forEach((group, idx) => {
@@ -262,10 +323,17 @@ function generateFallbackHerbalRemedy(symptoms) {
       const when = ['Morning', 'Midday', 'Evening', 'Bedtime'][idx % 4];
       slots.push(`- ${when}: ${first.herb.split('(')[0].trim()} — ${first.prep.replace('Infusion:', '').replace('Decoction:', '').trim()}`);
     });
-    return slots.join('\n');
+    // extend with a second item if available, capped at 5 bullets total
+    selectedCategories.forEach((group, idx) => {
+      const second = group.herbs[1];
+      if (!second || slots.length >= 5) return;
+      const when = ['Late Morning', 'Afternoon', 'Late Evening', 'Optional'][idx % 4];
+      slots.push(`- ${when}: ${second.herb.split('(')[0].trim()} — ${second.prep.replace('Infusion:', '').replace('Decoction:', '').trim()}`);
+    });
+    return slots.slice(0, 5).join('\n');
   })();
 
-  return `${perCategorySections}\n\n### 🗓️ Simple Daily Plan\n${schedule}\n\n### 📋 Specific Instructions\n${personalizedTips || '- Follow the routine daily and adjust to your tolerance.'}`;
+  return `${perCategorySections}\n\n${generalSection}\n\n### 🗓️ Daily Schedule\n${schedule}\n\n### 📋 Specific Instructions\n${personalizedTips || '- Follow the routine daily and adjust to your tolerance.'}`;
 }
 
 module.exports = {
