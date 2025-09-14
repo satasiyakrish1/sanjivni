@@ -50,9 +50,9 @@ const Contact = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <SEO
-        title="Contact Sanjivani AI - Get in Touch With Our Team"
-        description="Have questions or need assistance? Contact the Sanjivani AI team for support with herbal remedies, appointments, medicines, or any other needs."
-        keywords="contact prescripto, healthcare support, customer service, help, contact us, healthcare assistance"
+        title="Contact Sanjivni AI - Get in Touch With Our Team"
+        description="Have questions or need assistance? Contact the Sanjivni AI team for support with herbal remedies, appointments, medicines, or any other needs."
+        keywords="contact sanjivni, healthcare support, customer service, help, contact us, healthcare assistance"
         canonicalUrl="/contact"
       />
 
@@ -107,9 +107,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-gray-700">Email</h3>
                   <p className="text-gray-600 mt-1">
-                    General Inquiries: info@sanjivani.com<br />
-                    Support: support@sanjivani.com<br />
-                    Careers: careers@sanjivani.com
+                    General Inquiries: info@sanjivni.com<br />
+                    Support: support@sanjivni.com<br />
+                    Careers: careers@sanjivni.com
                   </p>
                 </div>
               </div>
@@ -255,13 +255,13 @@ const Contact = () => {
         <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-8 rounded-lg">
           <div className="flex items-center mb-6">
             <Users className="text-primary mr-3" size={32} />
-            <h2 className="text-3xl font-bold text-gray-800">Careers at Prescripto</h2>
+            <h2 className="text-3xl font-bold text-gray-800">Careers at Sanjivni</h2>
           </div>
 
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-2/3">
               <p className="text-gray-600 mb-6">
-                Join our team of innovators who are passionate about transforming healthcare through technology. At Prescripto, we're building solutions that make healthcare more accessible, efficient, and personalized for everyone.
+                Join our team of innovators who are passionate about transforming healthcare through technology. At Sanjivni, we're building solutions that make healthcare more accessible, efficient, and personalized for everyone.
               </p>
               <p className="text-gray-600 mb-6">
                 We offer competitive benefits, a flexible work environment, and opportunities for professional growth. If you're excited about making a difference in healthcare, we'd love to hear from you.
@@ -317,21 +317,21 @@ const Contact = () => {
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
             <h3 className="font-bold text-lg text-gray-800 mb-3">I'm having trouble with the app. Where can I get help?</h3>
             <p className="text-gray-600">
-              For technical support, please email support@prescripto.com or use the form above. Be sure to include details about your device and the issue you're experiencing.
+              For technical support, please email support@sanjivni.com or use the form above. Be sure to include details about your device and the issue you're experiencing.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
             <h3 className="font-bold text-lg text-gray-800 mb-3">How do I change or cancel my appointment?</h3>
             <p className="text-gray-600">
-              You can manage your appointments directly through the Prescripto app or website. If you need assistance, contact our support team.
+              You can manage your appointments directly through the Sanjivni app or website. If you need assistance, contact our support team.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
             <h3 className="font-bold text-lg text-gray-800 mb-3">Do you have partnership opportunities?</h3>
             <p className="text-gray-600">
-              Yes! We're always looking to collaborate with healthcare providers and organizations. Please email partnerships@prescripto.com to discuss potential opportunities.
+              Yes! We're always looking to collaborate with healthcare providers and organizations. Please email partnerships@sanjivni.com to discuss potential opportunities.
             </p>
           </div>
         </div>

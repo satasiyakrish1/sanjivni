@@ -7,16 +7,16 @@ const Team = () => {
   // Team members data - keeping original data unchanged
   const founders = [
     {
-      name: 'Krish Satasiya',
-      role: 'Founder & CEO',
+      name: 'Kavita Giri',
+      role: 'Team Leader',
       bio: 'Visionary health technologist passionate about natural wellness. Founded Sanjivani AI to bridge the gap between people and trusted herbal guidance.',
-      image: about_image
+      image: "/Kavita.jpg"
     },
     {
-      name: 'Dhruv Panchal',
-      role: 'Co-Founder & CMO',
+      name: 'Vardhana Trivedi',
+      role: 'Member',
       bio: 'Passionate about transforming healthcare accessibility, driving innovative marketing strategies that amplify Priscripto’s impact and reach within the medical ecosystem.',
-      image: assets.dhruv
+      image: "/Vardhana.jpg"
     }
   ]
 
@@ -25,39 +25,64 @@ const Team = () => {
       name: 'Neha Satasiya',
       role: 'Chief Technology Officer',
       bio: 'Tech innovator with expertise in health software. Oversees the technical architecture and implementation of Sanjivni\'s platform.',
-      image: assets.doc3
+      image: assets.profile_pic
     },
     {
       name: 'Drx. Vaibhav Satasiya',
       role: 'Head of Product',
       bio: 'Product strategist focused on intuitive natural wellness solutions. Leads the product roadmap and user experience design at Sanjivni.',
-      image: assets.doc4
+      image: assets.profile_pic
     },
     {
       name: 'Dr. Vikram Singh',
       role: 'Medical Advisor',
       bio: 'Specialist in integrative health. Provides guidance to ensure Sanjivani AI meets high standards of safety and reliability.',
-      image: assets.doc5
+      image: assets.profile_pic
     },
     {
       name: 'Divya Prajapati',
       role: 'Head of Operations',
       bio: 'Operations expert with a background in health operations. Ensures smooth day-to-day functioning of all Sanjivani AI services.',
-      image: assets.doc6
+      image: assets.profile_pic
     }
   ]
 
-  // Journey milestones - keeping original data unchanged
+  // Sanjivni Project AI-Integrated Timeline
   const journeyMilestones = [
     {
-      year: '2024',
-      title: 'API & Service Marketplace',
-      description: 'Launched the API Marketplace to enable developers to build on the Sanjivani AI platform, fostering innovation in natural wellness solutions.'
+      date: 'Sept 11',
+      title: 'Project Kickoff & Setup',
+      description: 'Finalized problem statement: "Symptom to Herbal Remedy AI Assistant". Created GitHub repo (frontend + backend). Set up Google Gemini + OpenAI API keys. AI Task: Used OpenAI to generate initial dataset (20 symptoms → remedies in JSON).'
     },
     {
-      year: '2025',
-      title: 'Looking Forward',
-      description: 'Sanjivani AI continues to evolve with a focus on AI-driven natural wellness solutions and expanding access to trusted herbal guidance.'
+      date: 'Sept 12',
+      title: 'Backend API (Phase 1)',
+      description: 'Built Express/Node.js API with /remedy endpoint. Integrated static JSON dataset for remedies. AI Task: Used Gemini to auto-expand dataset (50+ symptoms with herbs). Output: Simple API returns remedies for symptom.'
+    },
+    {
+      date: 'Sept 13',
+      title: 'Backend API (Phase 2)',
+      description: 'Connected MongoDB/SQLite for dynamic storage. Added fuzzy matching (e.g., "sore throat" = "cough"). AI Task: OpenAI generated synonym mapping (e.g., "stomach ache" ~ "abdominal pain").'
+    },
+    {
+      date: 'Sept 14',
+      title: 'Frontend Development',
+      description: 'React UI: symptom input box + result card. Show herb name, image, basic description. AI Task: Gemini generated short herbal explanations with benefits.'
+    },
+    {
+      date: 'Sept 15',
+      title: 'Dual AI Layer Enhancement',
+      description: 'Flow: DB finds herb → AI refines response. Gemini: generates detailed herbal remedy text. OpenAI: adds safety note + dosage info. Combined Output = best explanation.'
+    },
+    {
+      date: 'Sept 16',
+      title: 'Testing & Refinement',
+      description: 'Tested 20+ symptoms (cough, fever, headache, stomach pain, cold, etc.). Compared Gemini vs OpenAI output → kept the best parts. AI Task: Auto-summarized test feedback into improvement checklist.'
+    },
+    {
+      date: 'Sept 17',
+      title: 'Final Polishing & Deployment',
+      description: 'Added disclaimer: "This is not medical advice. Consult a doctor." Improved UI (herbal icons, clean cards). Deployed: Backend (Render/Railway) + Frontend (Vercel/Netlify). AI Task: OpenAI generated a project pitch + demo script.'
     }
   ]
 
@@ -103,28 +128,11 @@ const Team = () => {
         </div>
       </div>
 
-      {/* Team Members Section */}
-      <div className="mb-16">
-        <div className="text-center text-2xl mb-8 text-[#707070]">
-          <p>OUR <span className="text-gray-700 font-semibold">TEAM</span></p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="flex flex-col items-center bg-white border border-gray-100 p-5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
-              
-              <h3 className="text-lg font-semibold text-gray-800">{member.name}</h3>
-              <p className="text-primary font-medium mb-2 text-sm">{member.role}</p>
-              <p className="text-gray-600 text-center text-sm">{member.bio}</p>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* Journey Section */}
       <div className="mb-16 bg-white py-10 rounded-lg shadow-sm">
         <div className="text-center text-2xl mb-8 text-[#707070]">
-          <p>OUR <span className="text-gray-700 font-semibold">JOURNEY</span></p>
+          <p>📅 SANJIVNI PROJECT <span className="text-gray-700 font-semibold">AI-INTEGRATED TIMELINE</span></p>
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4">
@@ -134,20 +142,43 @@ const Team = () => {
           {/* Timeline items */}
           {journeyMilestones.map((milestone, index) => (
             <div key={index} className={`relative flex flex-col md:flex-row md:items-center mb-16 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-              {/* Year bubble */}
-              <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center z-10 shadow-md">
-                <span className="font-bold">{milestone.year.slice(-2)}</span>
+              {/* Date bubble */}
+              <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center z-10 shadow-md">
+                <span className="font-bold text-xs text-center leading-tight">{milestone.date}</span>
               </div>
               
               {/* Content */}
               <div className={`ml-20 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-16' : 'md:pl-16'}`}>
                 <div className="bg-white border border-gray-100 p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">{milestone.year} - {milestone.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">{milestone.date} - {milestone.title}</h3>
                   <p className="text-gray-600">{milestone.description}</p>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Timeline Summary */}
+        <div className="mt-12 bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg border border-green-200">
+          <h3 className="text-xl font-semibold text-center text-gray-800 mb-4">✅ By Sept 17th, We Delivered:</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            <div className="flex items-center space-x-3">
+              <span className="text-green-600 font-bold">✓</span>
+              <span className="text-gray-700">Symptom → Remedy API (DB + AI powered)</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <span className="text-green-600 font-bold">✓</span>
+              <span className="text-gray-700">Frontend app (input → herbal suggestion)</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <span className="text-green-600 font-bold">✓</span>
+              <span className="text-gray-700">Best AI-enhanced explanations (Gemini + OpenAI hybrid)</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <span className="text-green-600 font-bold">✓</span>
+              <span className="text-gray-700">Deployed live project</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -159,51 +190,6 @@ const Team = () => {
         </p>
       </div>
 
-      {/* Partners and Clients Section */}
-      <div className="mb-16 bg-white py-10 rounded-lg shadow-sm">
-        <div className="text-center text-2xl mb-8 text-[#707070]">
-          <p>OUR <span className="text-gray-700 font-semibold">PARTNERS & CLIENTS</span></p>
-        </div>
-
-        <div className="mb-8">
-          <p className="text-gray-600 text-center max-w-3xl mx-auto mb-10">
-            We're proud to collaborate with leading hospitals and healthcare institutions that share our vision of improving healthcare accessibility and quality.
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto px-4">
-            {/* Hospital Partners - keeping original content */}
-            <div className="flex flex-col items-center bg-white border border-gray-100 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <img src={assets.hospital1} alt="City Hospital" className="w-32 h-32 object-contain mb-3" />
-              <p className="text-primary font-medium text-sm">ExploitXplorers</p>
-            </div>
-            
-            <div className="flex flex-col items-center bg-white border border-gray-100 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <img src={assets.hospital2} alt="BOX Crafts Pvt. Ltd." className="w-32 h-32 object-contain mb-3" />
-              <p className="text-primary font-medium text-sm">BOXCrafts Pvt. Ltd.</p>
-            </div>
-            
-            <div className="flex flex-col items-center bg-white border border-gray-100 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <img src={assets.hospital3} alt="Shiv Medic" className="w-32 h-32 object-contain mb-3" />
-              <p className="text-primary font-medium text-sm">Shiv Medico</p>
-            </div>
-            
-            <div className="flex flex-col items-center bg-white border border-gray-100 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <img src={assets.hospital4} alt="Satyam Medical" className="w-32 h-32 object-contain mb-3" />
-              <p className="text-primary font-medium text-sm">Satyam Medical's</p>
-            </div>
-            
-            <div className="flex flex-col items-center bg-white border border-gray-100 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <img src={assets.hospital5} alt="Sundaram Clinic" className="w-32 h-32 object-contain mb-3" />
-              <p className="text-primary font-medium text-sm">Sundaram Clinic</p>
-            </div>
-            
-            <div className="flex flex-col items-center bg-white border border-gray-100 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-              <img src={assets.hospital6} alt="Shivam Laboratoires" className="w-32 h-32 object-contain mb-3" />
-              <p className="text-primary font-medium text-sm">Shivam MediLabs</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

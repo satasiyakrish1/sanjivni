@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <SEO
-        title="About Sanjivani AI – AI-Powered Herbal Remedy Finder"
+        title="About Sanjivni AI – AI-Powered Herbal Remedy Finder"
         description="Learn about Sanjivni, the AI-powered platform that blends Ayurvedic wisdom with modern AI to suggest safe, effective herbal remedies tailored to your symptoms."
         keywords="about sanjivni, herbal remedies, ayurveda, ai health, natural remedies, symptom checker"
         canonicalUrl="/about"
@@ -17,7 +17,7 @@ const About = () => {
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-800">About <span className="text-primary">Sanjivni</span></h1>
         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-          Transforming healthcare access through technology since 2020
+          Transforming healthcare access through technology since 2025
         </p>
       </div>
 
@@ -26,26 +26,21 @@ const About = () => {
         <div className="lg:w-1/2">
           <img
             className="w-full rounded-lg shadow-lg"
-            src={assets.about_image}
-            alt="Sanjivani AI Platform"
+            src="https://media.istockphoto.com/id/2029713341/photo/kr%C3%A4uter-der-provence.jpg?s=612x612&w=0&k=20&c=mwmHgtbnlXr3ZsFP2OKHMGrbPDIT-EJlRqUZB6d3SOc="
+            alt="Sanjivni AI Platform"
           />
         </div>
         <div className="lg:w-1/2 flex flex-col justify-center gap-6">
           <h2 className="text-3xl font-bold text-gray-800">Our Mission</h2>
           <p className="text-gray-600">
-            Welcome to Sanjivni, your companion for discovering safe, effective herbal and Ayurvedic remedies. We combine traditional wisdom with modern AI to guide your everyday wellness decisions.
-          </p>
-          <p className="text-gray-600">
-            Our mission is to simplify healthcare access for everyone. By connecting patients with qualified healthcare providers through our intuitive platform, we're removing barriers to quality care and empowering individuals to take control of their health journey.
+            Welcome to Sanjivni, your companion for discovering safe, effective herbal and Ayurvedic remedies. We combine traditional wisdom with modern AI to guide your everyday wellness decisions.Our mission is to simplify healthcare access for everyone. By connecting patients with qualified healthcare providers through our intuitive platform, we're removing barriers to quality care and empowering individuals to take control of their health journey.
           </p>
 
           <h2 className="text-3xl font-bold text-gray-800 mt-6">Our Vision</h2>
           <p className="text-gray-600">
-            Our vision with Sanjivani AI is to make natural wellness accessible, understandable, and personalized for everyone.
+            Our vision with Sanjivni AI is to make natural wellness accessible, understandable, and personalized for everyone.
           </p>
-          <p className="text-gray-600">
-            We envision a world where healthcare is accessible, affordable, and personalized for everyone, regardless of location or circumstance.
-          </p>
+          
         </div>
       </div>
 
@@ -85,55 +80,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Our Services */}
-      <div className="mb-20">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">For Patients</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={18} />
-                <span className="text-gray-600">Easy appointment booking with your preferred doctors</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={18} />
-                <span className="text-gray-600">Secure storage and access to your medical records</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={18} />
-                <span className="text-gray-600">Medication reminders and refill tracking</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={18} />
-                <span className="text-gray-600">Telehealth consultations from the comfort of home</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">For Healthcare Providers</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={18} />
-                <span className="text-gray-600">Efficient patient scheduling and management</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={18} />
-                <span className="text-gray-600">Secure communication channels with patients</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={18} />
-                <span className="text-gray-600">Digital record-keeping and prescription management</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={18} />
-                <span className="text-gray-600">Analytics to improve practice management</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+     
 
       {/* Security Information */}
       <div className="mb-20 bg-gradient-to-r from-blue-50 to-teal-50 p-8 rounded-lg">
@@ -142,7 +89,7 @@ const About = () => {
           <h2 className="text-3xl font-bold text-gray-800">Security & Privacy</h2>
         </div>
         <p className="text-gray-600 mb-6">
-          At Prescripto, we take your privacy and data security seriously. Our platform is built with multiple layers of protection to ensure your medical information remains confidential and secure.
+          At Sanjivni, we take your privacy and data security seriously. Our platform is built with multiple layers of protection to ensure your health information remains confidential and secure.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -151,7 +98,7 @@ const About = () => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={16} />
-                <span className="text-gray-600">Clouflare storage and transmission</span>
+                <span className="text-gray-600">Cloudflare-protected infrastructure and encrypted transmission</span>
               </li>
               <li className="flex items-start">
                 <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={16} />
@@ -159,7 +106,7 @@ const About = () => {
               </li>
               <li className="flex items-start">
                 <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={16} />
-                <span className="text-gray-600">Regular security audits and penetration testing</span>
+                <span className="text-gray-600">Regular security reviews and penetration testing</span>
               </li>
             </ul>
           </div>
@@ -171,13 +118,10 @@ const About = () => {
                 <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={16} />
                 <span className="text-gray-600">Granular access permissions for your data</span>
               </li>
+              
               <li className="flex items-start">
                 <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={16} />
-                <span className="text-gray-600">Two-factor authentication for account security</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-primary mt-1 mr-2 flex-shrink-0" size={16} />
-                <span className="text-gray-600">Detailed audit logs of all data access</span>
+                <span className="text-gray-600">Detailed audit logs and data export controls</span>
               </li>
             </ul>
           </div>
@@ -190,68 +134,37 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow border border-gray-100">
             <h3 className="text-xl font-bold text-gray-800 mb-3">Current Version</h3>
-            <p className="text-gray-600 mb-2">Prescripto Platform: v5.5ES</p>
-            <p className="text-gray-600 mb-2">Mobile App: v1.1BETA</p>
-            <p className="text-gray-600 mb-2">Provider Portal: v3.9.5</p>
-            <p className="text-gray-500 text-sm mt-4">Last Updated: April 16, 2025</p>
+            <p className="text-gray-600 mb-2">Sanjivni Platform: v1.0</p>
+            <p className="text-gray-600 mb-2">Mobile App: coming soon</p>
+            <p className="text-gray-600 mb-2">Provider Portal: v0.9</p>
+            <p className="text-gray-500 text-sm mt-4">Last Updated: September 2025</p>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow border border-gray-100">
             <h3 className="text-xl font-bold text-gray-800 mb-3">Coverage</h3>
-            <p className="text-gray-600 mb-2">Available in 3 states</p>
-            <p className="text-gray-600 mb-2">150+ providers</p>
-            <p className="text-gray-600 mb-2">150+ healthcare facilities</p>
-            <p className="text-gray-600 mb-2">Supporting 10,000+ patients</p>
+            <p className="text-gray-600 mb-2">Available across India (pilot regions active)</p>
+            <p className="text-gray-600 mb-2">Partnering with Ayurvedic practitioners and clinics</p>
+            <p className="text-gray-600 mb-2">Growing network of verified experts</p>
+            <p className="text-gray-600 mb-2">Serving early adopters and communities</p>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow border border-gray-100">
             <h3 className="text-xl font-bold text-gray-800 mb-3">Security</h3>
-            <p className="text-gray-600 mb-2">End-to-End Encryption</p>
-            <p className="text-gray-600 mb-2">Role-Based Access Control</p>
-            <p className="text-gray-600 mb-2">Regular Security Audits</p>
-            <p className="text-gray-600 mb-2">Data Minimization & Anonymization</p>
+            <p className="text-gray-600 mb-2">End-to-end encryption</p>
+            <p className="text-gray-600 mb-2">Role-based access control</p>
+            <p className="text-gray-600 mb-2">Security reviews each release</p>
+            <p className="text-gray-600 mb-2">Data minimization and anonymization</p>
           </div>
         </div>
       </div>
 
-      {/* Company Timeline */}
-      <div className="mb-20">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Our Journey</h2>
-        <div className="space-y-8">
-
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/4">
-              <div className="flex items-center md:justify-end mb-4 md:pr-8">
-                <Clock className="text-primary mr-2" size={20} />
-                <h3 className="font-bold text-xl text-gray-800">2024</h3>
-              </div>
-            </div>
-            <div className="md:w-3/4 md:border-l-2 md:border-primary md:pl-8 pb-8">
-              <h4 className="font-bold text-lg text-gray-800 mb-2">Expanded to 20 States</h4>
-              <p className="text-gray-600">Rapid growth allowed us to expand our network to serve patients across multiple regions.</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/4">
-              <div className="flex items-center md:justify-end mb-4 md:pr-8">
-                <Clock className="text-primary mr-2" size={20} />
-                <h3 className="font-bold text-xl text-gray-800">2025</h3>
-              </div>
-            </div>
-            <div className="md:w-3/4 md:border-l-2 md:border-primary md:pl-8">
-              <h4 className="font-bold text-lg text-gray-800 mb-2">AI-Powered Health Insights</h4>
-              <p className="text-gray-600">Launched our predictive health platform to provide personalized care recommendations and preventative guidance.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Contact Information */}
       <div className="bg-gray-50 p-8 rounded-lg text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">Get in Touch</h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Have questions about Prescripto? Our team is here to help you navigate your healthcare journey.
+          Have questions about Sanjivni? Our team is here to help you navigate your healthcare journey.
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <a href="/Contact">
