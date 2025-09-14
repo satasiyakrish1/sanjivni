@@ -13,86 +13,91 @@ const Terms = () => {
 
           <section className="my-10 space-y-6">
             <p>
-              Welcome to Sanjivni. By accessing or using our Service, you agree to be bound by these Terms and Conditions. Please read these terms carefully before using our platform.
+              Welcome to Sanjivni – your trusted digital healthcare companion. By using our platform and services, you agree to follow the terms outlined below. Please read them carefully.
             </p>
 
             <h2 className="text-lg font-semibold">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using Sanjivni's services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our services.
+              By accessing or using Sanjivni's services, you confirm that you have read, understood, and agreed to these Terms & Conditions. If you do not agree, please stop using our services.
             </p>
 
             <h2 className="text-lg font-semibold">2. Medical Disclaimer</h2>
-            <p>
-              The information provided through our Service is for general informational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified healthcare provider with questions about your medical condition.
-            </p>
+            <ul className="list-disc pl-6">
+              <li>Sanjivni provides health information and AI-guided herbal/home remedies only for general awareness.</li>
+              <li>We are not a substitute for doctors or qualified healthcare providers.</li>
+              <li>Always consult a licensed medical professional before making healthcare decisions.</li>
+              <li>Sanjivni is not responsible for medical emergencies or professional treatment delays.</li>
+            </ul>
 
             <h2 className="text-lg font-semibold">3. User Accounts</h2>
+            <p>When creating and using your account:</p>
             <ul className="list-disc pl-6">
-              <li>You must provide accurate and complete information when creating an account</li>
-              <li>You are responsible for maintaining the confidentiality of your account credentials</li>
-              <li>You must immediately notify us of any unauthorized use of your account</li>
-              <li>We reserve the right to suspend or terminate accounts that violate these terms</li>
+              <li>You must provide true and complete information.</li>
+              <li>You are responsible for keeping your account credentials private.</li>
+              <li>Report any unauthorized use of your account immediately.</li>
+              <li>Sanjivni reserves the right to suspend or terminate accounts that break our rules.</li>
             </ul>
 
             <h2 className="text-lg font-semibold">4. Appointment Booking</h2>
-            <p>
-              When booking appointments through our platform:
-            </p>
             <ul className="list-disc pl-6">
-              <li>You agree to provide accurate booking information</li>
-              <li>You must attend scheduled appointments or cancel within the specified timeframe</li>
-              <li>Cancellation policies may vary by healthcare provider</li>
-              <li>We are not responsible for the quality of medical services provided</li>
+              <li>When booking with doctors or healthcare providers, you agree to provide accurate details.</li>
+              <li>Please attend your appointments or cancel on time.</li>
+              <li>Cancellation rules may differ depending on the provider.</li>
+              <li>Sanjivni only facilitates bookings and is not responsible for the quality of medical services provided by third parties.</li>
             </ul>
 
-            <h2 className="text-lg font-semibold">5. Prescription Services</h2>
-            <p>
-              Our prescription management services are subject to the following conditions:
-            </p>
+            <h2 className="text-lg font-semibold">5. Prescription & Medicine Services</h2>
             <ul className="list-disc pl-6">
-              <li>All prescriptions must be legally valid and issued by licensed healthcare providers</li>
-              <li>Users must provide accurate prescription information</li>
-              <li>We do not guarantee the availability of prescribed medications</li>
-              <li>Users must comply with all applicable laws regarding prescription medications</li>
+              <li>All prescriptions must be valid and issued by licensed doctors.</li>
+              <li>You must provide accurate details when uploading or requesting prescriptions.</li>
+              <li>We do not guarantee that all medicines will be available.</li>
+              <li>You are fully responsible for following laws regarding prescription medicines.</li>
             </ul>
 
-            <h2 className="text-lg font-semibold">6. Payment Terms</h2>
-            <p>
-              By using our paid services:
-            </p>
+            <h2 className="text-lg font-semibold">6. Payments & Refunds</h2>
             <ul className="list-disc pl-6">
-              <li>You agree to pay all fees and charges associated with your use of the Service</li>
-              <li>All payments must be made through our approved payment methods</li>
-              <li>Fees are non-refundable unless otherwise specified</li>
-              <li>We reserve the right to modify our fees with prior notice</li>
+              <li>By using paid services, you agree to pay the fees shown at the time of booking/purchase.</li>
+              <li>Payments are accepted only through approved methods.</li>
+              <li>Fees are non-refundable, unless stated otherwise in writing.</li>
+              <li>Sanjivni may update its pricing, but we will notify users before changes take effect.</li>
             </ul>
 
             <h2 className="text-lg font-semibold">7. Intellectual Property</h2>
-            <p>
-              All content and materials available on Sanjivani AI are protected by intellectual property rights. You may not use, reproduce, or distribute our content without authorization.
-            </p>
+            <ul className="list-disc pl-6">
+              <li>All content on Sanjivni (logos, text, designs, AI models, and other materials) belongs to Sanjivni AI.</li>
+              <li>You cannot copy, reuse, or distribute our content without written permission.</li>
+            </ul>
 
             <h2 className="text-lg font-semibold">8. Limitation of Liability</h2>
-            <p>
-              To the maximum extent permitted by law, Sanjivani AI and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service.
-            </p>
+            <ul className="list-disc pl-6">
+              <li>Sanjivni is not responsible for losses, damages, or risks that arise from using our platform.</li>
+              <li>We are not liable for any indirect, incidental, or special damages (such as missed appointments, wrong information usage, or medical misinterpretation).</li>
+            </ul>
 
             <h2 className="text-lg font-semibold">9. Privacy</h2>
-            <p>
-              Your use of our Service is also governed by our Privacy Policy. Please review our Privacy Policy to understand our practices.
-            </p>
-
-            <h2 className="text-lg font-semibold">10. Modifications to Terms</h2>
-            <p>
-              We reserve the right to modify these terms at any time. We will notify users of any material changes via email or through our Service.
-            </p>
-
-            <h2 className="text-lg font-semibold">Contact Us</h2>
-            <p>If you have any questions about these Terms and Conditions, please contact us:</p>
             <ul className="list-disc pl-6">
-              <li>By email: support@sanjivani</li>
-              <li>By visiting our contact page: <a href="./contact/" className="text-blue-500">Contact Us</a></li>
-              <li>By phone: +91 90543 09266</li>
+              <li>Your use of Sanjivni is also governed by our Privacy Policy.</li>
+              <li>We explain in detail how your personal and medical data is collected, used, and protected.</li>
+            </ul>
+
+            <h2 className="text-lg font-semibold">10. Updates to Terms</h2>
+            <ul className="list-disc pl-6">
+              <li>Sanjivni may update these Terms & Conditions at any time.</li>
+              <li>Important changes will be shared via email or app notifications.</li>
+              <li>Continuing to use our services after updates means you accept the new Terms.</li>
+            </ul>
+
+            <h2 className="text-lg font-semibold">11. Governing Law</h2>
+            <p>
+              These Terms & Conditions are governed by the laws of India. Any disputes will be handled under the jurisdiction of courts in India.
+            </p>
+
+            <h2 className="text-lg font-semibold">12. Contact Us</h2>
+            <p>For any questions, feedback, or concerns, you can reach us at:</p>
+            <ul className="list-disc pl-6">
+              <li>📧 Email: support@sanjivni.com</li>
+              <li>📞 Phone: +91 90543 09266</li>
+              <li>🌐 Website Contact Page: <a href="/contact" className="text-blue-500 hover:underline">Contact Us</a></li>
             </ul>
           </section>
         </div>
