@@ -334,7 +334,7 @@ const BookingModeSelector = ({
                           {patient.isCompleted ? (
                             <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Completed</span>
                           ) : (
-                            <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">#{patient.position}</span>
+                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">#{patient.position}</span>
                           )}
                         </div>
                       </div>

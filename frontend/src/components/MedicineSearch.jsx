@@ -367,11 +367,11 @@ const MedicineSearch = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search for medicines by name, generic name, or medical use..."
-            className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600"
             disabled={loading}
           >
             {loading ? 'Searching...' : 'Search'}
@@ -434,7 +434,7 @@ const MedicineSearch = () => {
                     setError('Unable to view medicine details. Please try again.');
                   }
                 }}
-                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 transition-colors"
               >
                 View Full Details
               </button>
@@ -485,7 +485,7 @@ const MedicineSearch = () => {
                     onClick={(e) => handleSearch(e, pageNum)}
                     className={`relative inline-flex items-center px-4 py-2 border ${
                       pageNum === page 
-                        ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
+                        ? 'z-10 bg-green-50 border-green-600 text-green-700'
                         : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
                     }`}
                   >

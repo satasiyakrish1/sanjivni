@@ -328,7 +328,7 @@ const Donation = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <SEO
         title="Donate to Sanjivani AI - Support Natural Wellness Innovation"
         description="Support Sanjivni's mission to make safe, effective herbal guidance accessible. Your donation helps us improve and expand our services."
@@ -364,7 +364,7 @@ const Donation = () => {
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
         {/* Donation Form */}
-        <div className="bg-white p-8 rounded-2xl shadow-xl md:col-span-3 border border-blue-100">
+        <div className="bg-white p-8 rounded-2xl shadow-xl md:col-span-3 border border-green-100">
           <h2 className="text-2xl font-semibold mb-6 text-gray-800">Make a Donation</h2>
 
           <form onSubmit={handleDonation} className="space-y-6">
@@ -377,7 +377,7 @@ const Donation = () => {
                     key={amount}
                     type="button"
                     className={`py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${formData.amount === amount
-                      ? 'bg-primary text-white shadow-lg ring-2 ring-blue-300'
+                      ? 'bg-primary text-white shadow-lg ring-2 ring-green-300'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-800'
                       }`}
                     onClick={() => handleAmountSelect(amount)}
@@ -447,7 +447,7 @@ const Donation = () => {
 
             <button
               type="submit"
-              className="w-full bg-primary text-white py-4 rounded-xl hover:bg-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
+              className="w-full bg-primary text-white py-4 rounded-xl hover:bg-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
               disabled={loading}
             >
               {loading ? (
@@ -474,11 +474,11 @@ const Donation = () => {
 
         {/* Impact Card */}
         <div className="md:col-span-2">
-          <div className="bg-white p-6 rounded-2xl shadow-lg border border-blue-100 h-full">
+          <div className="bg-white p-6 rounded-2xl shadow-lg border border-green-100 h-full">
             <h3 className="text-xl font-semibold mb-4 text-gray-800">Your Impact</h3>
 
             <div className="space-y-4">
-              <div className="flex items-start p-3 bg-blue-50 rounded-xl">
+              <div className="flex items-start p-3 bg-green-50 rounded-xl">
                 <div className="flex-shrink-0 bg-primary rounded-full p-2 mr-3">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -490,7 +490,7 @@ const Donation = () => {
                 </div>
               </div>
 
-              <div className="flex items-start p-3 bg-blue-50 rounded-xl">
+              <div className="flex items-start p-3 bg-green-50 rounded-xl">
                 <div className="flex-shrink-0 bg-primary rounded-full p-2 mr-3">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -502,7 +502,7 @@ const Donation = () => {
                 </div>
               </div>
 
-              <div className="flex items-start p-3 bg-blue-50 rounded-xl">
+              <div className="flex items-start p-3 bg-green-50 rounded-xl">
                 <div className="flex-shrink-0 bg-primary rounded-full p-2 mr-3">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -515,7 +515,7 @@ const Donation = () => {
               </div>
             </div>
 
-            <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
+            <div className="mt-6 p-4 bg-green-50 rounded-xl border border-green-100">
               <h4 className="font-semibold text-gray-800 mb-2">Our Promise</h4>
               <p className="text-sm text-gray-600">
                 Every donation, regardless of size, makes a difference in our mission to revolutionize healthcare access in India. We guarantee 100% of your donation goes directly to our programs.
@@ -564,7 +564,7 @@ const Donation = () => {
         <h2 className="text-2xl font-semibold mb-8 text-center text-gray-800">What Our Donors Say</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+          <div className="bg-white p-6 rounded-xl shadow-md border border-green-100">
             <div className="flex mb-4">
               {[1, 2, 3, 4, 5].map((star) => (
                 <svg key={star} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -576,7 +576,7 @@ const Donation = () => {
             <div className="font-medium">- Priya S.</div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+          <div className="bg-white p-6 rounded-xl shadow-md border border-green-100">
             <div className="flex mb-4">
               {[1, 2, 3, 4, 5].map((star) => (
                 <svg key={star} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -588,7 +588,7 @@ const Donation = () => {
             <div className="font-medium">- Rajesh M.</div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+          <div className="bg-white p-6 rounded-xl shadow-md border border-green-100">
             <div className="flex mb-4">
               {[1, 2, 3, 4, 5].map((star) => (
                 <svg key={star} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -607,12 +607,12 @@ const Donation = () => {
         <h2 className="text-2xl font-semibold mb-8 text-center text-gray-800">Frequently Asked Questions</h2>
 
         <div className="space-y-4">
-          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+          <div className="bg-white p-6 rounded-xl shadow-md border border-green-100">
             <h3 className="font-medium text-lg text-gray-800 mb-2">Is my donation tax-deductible?</h3>
             <p className="text-gray-600">Yes, Sanjivani AI is a registered non-profit organization, and all donations are eligible for tax deduction under Section 80G of the Income Tax Act.</p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
+          <div className="bg-white p-6 rounded-xl shadow-md border border-green-100">
             <h3 className="font-medium text-lg text-gray-800 mb-2">How are donations used?</h3>
             <p className="text-gray-600">Your donations directly support our healthcare initiatives, technology development, community outreach programs, and operational costs to ensure sustainable impact.</p>
           </div>

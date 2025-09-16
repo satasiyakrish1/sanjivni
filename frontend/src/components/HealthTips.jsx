@@ -40,7 +40,7 @@ const HealthTips = () => {
     }, [])
 
     return (
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 px-4">
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 py-16 px-4">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl font-medium text-center mb-8 text-gray-800">Daily Health Tips</h2>
                 
@@ -66,7 +66,7 @@ const HealthTips = () => {
                         {healthTips.map((_, index) => (
                             <button
                                 key={index}
-                                className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentTip ? 'bg-blue-500 w-4' : 'bg-gray-300'}`}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentTip ? 'bg-green-600 w-4' : 'bg-gray-300'}`}
                                 onClick={() => setCurrentTip(index)}
                             />
                         ))}

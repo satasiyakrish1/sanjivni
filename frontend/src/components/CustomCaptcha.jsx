@@ -156,7 +156,7 @@ const CustomCaptcha = ({ onVerify, onError, disabled = false }) => {
             <p className="mb-4">{challenge.question}</p>
             <div className="relative">
               <input
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600 disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="Answer"
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value)}
@@ -174,7 +174,7 @@ const CustomCaptcha = ({ onVerify, onError, disabled = false }) => {
             <p className="mb-4">{challenge.question}</p>
             <div className="relative">
               <input
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600 disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="Answer"
                 value={answer}
                 onChange={(e) => setAnswer(e.target.value)}
@@ -204,7 +204,7 @@ const CustomCaptcha = ({ onVerify, onError, disabled = false }) => {
                     checked={answer === option}
                     onChange={(e) => setAnswer(e.target.value)}
                     disabled={verified || disabled}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 disabled:opacity-50"
+                    className="h-4 w-4 text-green-600 focus:ring-green-600 border-gray-300 disabled:opacity-50"
                   />
                   <span className="text-gray-700">{option.charAt(0).toUpperCase() + option.slice(1)}</span>
                 </label>
@@ -224,7 +224,7 @@ const CustomCaptcha = ({ onVerify, onError, disabled = false }) => {
       
       {loading ? (
         <div className="flex justify-center p-4">
-          <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+          <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-green-600"></div>
         </div>
       ) : error ? (
         <div>
@@ -254,7 +254,7 @@ const CustomCaptcha = ({ onVerify, onError, disabled = false }) => {
               Refresh
             </button>
             <button 
-              className="bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-green-600 text-white rounded px-4 py-2 hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
               onClick={handleSubmit}
               disabled={!answer || refreshing || disabled}
             >

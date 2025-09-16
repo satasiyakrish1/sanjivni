@@ -67,7 +67,7 @@ const PasswordChangeForm = ({ token, backendUrl, onClose }) => {
                         name="currentPassword"
                         value={passwords.currentPassword}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-600 focus:ring-green-600"
                         required
                     />
                 </div>
@@ -78,7 +78,7 @@ const PasswordChangeForm = ({ token, backendUrl, onClose }) => {
                         name="newPassword"
                         value={passwords.newPassword}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-600 focus:ring-green-600"
                         required
                     />
                 </div>
@@ -89,7 +89,7 @@ const PasswordChangeForm = ({ token, backendUrl, onClose }) => {
                         name="confirmPassword"
                         value={passwords.confirmPassword}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-600 focus:ring-green-600"
                         required
                     />
                 </div>
@@ -104,7 +104,7 @@ const PasswordChangeForm = ({ token, backendUrl, onClose }) => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className={`px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        className={`px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >
                         {loading ? 'Updating...' : 'Update Password'}
                     </button>

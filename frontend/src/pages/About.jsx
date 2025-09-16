@@ -83,7 +83,7 @@ const About = () => {
      
 
       {/* Security Information */}
-      <div className="mb-20 bg-gradient-to-r from-blue-50 to-teal-50 p-8 rounded-lg">
+      <div className="mb-20 bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-lg">
         <div className="flex items-center mb-6">
           <Shield className="text-primary mr-3" size={32} />
           <h2 className="text-3xl font-bold text-gray-800">Security & Privacy</h2>

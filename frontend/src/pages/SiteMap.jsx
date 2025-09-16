@@ -22,7 +22,7 @@ const SiteMap = () => {
         <ul className="space-y-2">
           {publicRoutes.map((route, idx) => (
             <li key={idx} className="flex items-center gap-2">
-              <span className="inline-block w-2 h-2 bg-blue-400 rounded-full"></span>
+              <span className="inline-block w-2 h-2 bg-green-400 rounded-full"></span>
               <span className="font-medium">{route.label}:</span>
               <span className="text-gray-700">{route.path}</span>
             </li>

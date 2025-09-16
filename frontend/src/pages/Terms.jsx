@@ -97,7 +97,7 @@ const Terms = () => {
             <ul className="list-disc pl-6">
               <li>📧 Email: support@sanjivni.com</li>
               <li>📞 Phone: +91 90543 09266</li>
-              <li>🌐 Website Contact Page: <a href="/contact" className="text-blue-500 hover:underline">Contact Us</a></li>
+              <li>🌐 Website Contact Page: <a href="/contact" className="text-green-600 hover:underline">Contact Us</a></li>
             </ul>
           </section>
         </div>

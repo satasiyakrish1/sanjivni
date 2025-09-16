@@ -107,7 +107,7 @@ const ConnectionTroubleshooter = () => {
             <button
               onClick={runDiagnostics}
               disabled={isLoading}
-              className="bg-blue-500 hover:bg-blue-600 text-white text-sm py-2 px-4 rounded disabled:opacity-50"
+              className="bg-green-600 hover:bg-green-700 text-white text-sm py-2 px-4 rounded disabled:opacity-50"
             >
               {isLoading ? 'Running...' : 'Run Diagnostics'}
             </button>

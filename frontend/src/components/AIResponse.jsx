@@ -130,7 +130,7 @@ const AIResponse = ({ content = '', title = 'AI Result' }) => {
           <div className="relative">
             <button
               onClick={() => setIsLangOpen((v) => !v)}
-              className="px-3 py-1.5 text-xs rounded-md border border-transparent bg-primary text-white hover:bg-primary/90 flex items-center gap-1 min-w-[132px] justify-center shadow-sm"
+              className="px-3 py-1.5 text-xs rounded-md border border-transparent bg-primary text-white hover:bg-primary-dark flex items-center gap-1 min-w-[132px] justify-center shadow-sm"
               title="Translate"
             >
               {isTranslating ? (
@@ -148,26 +148,26 @@ const AIResponse = ({ content = '', title = 'AI Result' }) => {
             </button>
             {isLangOpen && (
               <div className="absolute right-0 mt-1 w-44 bg-white border border-gray-200 rounded-md shadow-lg z-20 overflow-hidden">
-                <button onClick={() => translate('en')} className={`w-full text-left px-3 py-2 text-sm hover:bg-primary/5 ${language==='en'?'bg-primary/5 text-primary':''}`}>English (default)</button>
+                <button onClick={() => translate('en')} className={`w-full text-left px-3 py-2 text-sm hover:bg-green-50 ${language==='en'?'bg-green-50 text-primary':''}`}>English (default)</button>
                 <div className="h-px bg-gray-100"/>
-                <button onClick={() => translate('hi')} className={`w-full text-left px-3 py-2 text-sm hover:bg-primary/5 ${language==='hi'?'bg-primary/5 text-primary':''}`}>हिन्दी (Hindi)</button>
-                <button onClick={() => translate('gu')} className={`w-full text-left px-3 py-2 text-sm hover:bg-primary/5 ${language==='gu'?'bg-primary/5 text-primary':''}`}>ગુજરાતી (Gujarati)</button>
+                <button onClick={() => translate('hi')} className={`w-full text-left px-3 py-2 text-sm hover:bg-green-50 ${language==='hi'?'bg-green-50 text-primary':''}`}>हिन्दी (Hindi)</button>
+                <button onClick={() => translate('gu')} className={`w-full text-left px-3 py-2 text-sm hover:bg-green-50 ${language==='gu'?'bg-green-50 text-primary':''}`}>ગુજરાતી (Gujarati)</button>
               </div>
             )}
           </div>
-          <button onClick={() => setFontScale((s) => Math.max(0.85, s - 0.05))} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-primary/5" title="Smaller text">A-</button>
-          <button onClick={() => setFontScale((s) => Math.min(1.4, s + 0.05))} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-primary/5" title="Larger text">A+</button>
-          <button onClick={handleCopy} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-primary/5 flex items-center gap-1" title="Copy markdown">
+          <button onClick={() => setFontScale((s) => Math.max(0.85, s - 0.05))} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-green-50" title="Smaller text">A-</button>
+          <button onClick={() => setFontScale((s) => Math.min(1.4, s + 0.05))} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-green-50" title="Larger text">A+</button>
+          <button onClick={handleCopy} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-green-50 flex items-center gap-1" title="Copy markdown">
             <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4a2 2 0 012-2h5a1 1 0 010 2H6v10a2 2 0 01-2 2H2a1 1 0 110-2h2V4z"/><path d="M8 6a2 2 0 012-2h6a2 2 0 012 2v10a2 2 0 01-2 2h-6a2 2 0 01-2-2V6z"/></svg>
             {copied ? 'Copied' : 'Copy'}
           </button>
-          <button onClick={handleDownloadMd} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-primary/5" title="Download .md">.md</button>
-          <button onClick={handleDownloadTxt} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-primary/5" title="Download .txt">.txt</button>
-          <button onClick={handlePrint} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-primary/5 flex items-center gap-1" title="Print">
+          <button onClick={handleDownloadMd} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-green-50" title="Download .md">.md</button>
+          <button onClick={handleDownloadTxt} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-green-50" title="Download .txt">.txt</button>
+          <button onClick={handlePrint} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-green-50 flex items-center gap-1" title="Print">
             <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M6 2a2 2 0 00-2 2v2h12V4a2 2 0 00-2-2H6z"/><path d="M4 8a2 2 0 00-2 2v3h3v3h10v-3h3v-3a2 2 0 00-2-2H4z"/></svg>
             Print
           </button>
-          <button onClick={() => setExpanded((e) => !e)} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-primary/5" title={expanded ? 'Collapse' : 'Expand'}>
+          <button onClick={() => setExpanded((e) => !e)} className="px-2.5 py-1.5 text-xs rounded-md border border-primary text-primary hover:bg-green-50" title={expanded ? 'Collapse' : 'Expand'}>
             {expanded ? 'Hide' : 'Show'}
           </button>
         </div>
@@ -196,14 +196,14 @@ const AIResponse = ({ content = '', title = 'AI Result' }) => {
                   );
                 },
                 a: ({ node, ...props }) => (
-                  <a {...props} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 hover:underline" />
+                  <a {...props} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-dark hover:underline" />
                 ),
                 ul: ({ node, ...props }) => (<ul className="list-none pl-0 space-y-2 my-2" {...props} />),
                 ol: ({ node, ...props }) => (<ol className="list-decimal pl-6 space-y-2 my-2" {...props} />),
                 h2: ({ node, children, ...props }) => {
                   const text = Array.isArray(children) ? children.map(String).join('') : String(children);
                   const id = `${slugify(text)}-h2`;
-                  return <h2 id={id} className="text-2xl font-bold mt-8 mb-4 text-gray-900 tracking-tight border-b border-primary/10 pb-2" {...props}>{children}</h2>;
+                  return <h2 id={id} className="text-2xl font-bold mt-8 mb-4 text-gray-900 tracking-tight border-b border-green-200 pb-2" {...props}>{children}</h2>;
                 },
                 h3: ({ node, children, ...props }) => {
                   const text = Array.isArray(children) ? children.map(String).join('') : String(children);

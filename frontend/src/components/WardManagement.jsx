@@ -68,7 +68,7 @@ const WardManagement = () => {
                                 <p className="text-gray-600">Occupancy Rate</p>
                                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                                     <div
-                                        className="bg-blue-600 h-2.5 rounded-full"
+                                        className="bg-green-600 h-2.5 rounded-full"
                                         style={{ width: `${stat.occupancyRate}%` }}
                                     ></div>
                                 </div>
@@ -120,7 +120,7 @@ const WardManagement = () => {
                         <div key={ward._id} className="bg-white p-6 rounded-lg shadow">
                             <div className="flex justify-between items-center mb-4">
                                 <h4 className="text-lg font-semibold">{ward.name}</h4>
-                                <span className={`px-3 py-1 rounded-full text-sm ${ward.type === 'ICU' ? 'bg-red-100 text-red-800' : ward.type === 'operation_theater' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'}`}>
+                                <span className={`px-3 py-1 rounded-full text-sm ${ward.type === 'ICU' ? 'bg-red-100 text-red-800' : ward.type === 'operation_theater' ? 'bg-green-100 text-green-800' : 'bg-green-100 text-green-800'}`}>
                                     {ward.type}
                                 </span>
                             </div>
@@ -134,7 +134,7 @@ const WardManagement = () => {
                             <div className="mt-4">
                                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                                     <div
-                                        className="bg-blue-600 h-2.5 rounded-full"
+                                        className="bg-green-600 h-2.5 rounded-full"
                                         style={{ width: `${ward.occupancyStatus}%` }}
                                     ></div>
                                 </div>

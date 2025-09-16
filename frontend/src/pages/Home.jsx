@@ -24,7 +24,7 @@ const Home = () => {
         </div>
         
         {/* Hero Section with Herbal Remedy Search */}
-        <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 md:p-10 mb-10">
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 md:p-10 mb-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Natural Herbal Remedies

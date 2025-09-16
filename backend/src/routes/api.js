@@ -1,5 +1,5 @@
 const express = require('express');
-const { getHerbalRemedyHandler } = require('../controllers/herbalRemedyController');
+const { getHerbalRemedyHandler, getHerbInfoHandler } = require('../controllers/herbalRemedyController');
 const axios = require('axios');
 const translate = require('google-translate-api-x');
 const { validateRequest, herbalRemedyValidationRules } = require('../middleware/validation');
@@ -28,6 +28,9 @@ router.get('/health', (req, res) => {
 
 // Herbal remedy endpoint with rate limiting and validation
 router.post('/herbal-remedy', apiLimiter, herbalRemedyValidationRules, validateRequest, getHerbalRemedyHandler);
+
+// Herb info endpoint (short queries like "benefits of ginger")
+router.post('/herb-info', apiLimiter, getHerbInfoHandler);
 
 // Translation proxy (to avoid browser CORS with Lingva)
 router.get('/translate', apiLimiter, async (req, res) => {

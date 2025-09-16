@@ -69,7 +69,7 @@ const PrescriptionTemplates = ({ onApplyTemplate }) => {
           />
           <button
             onClick={saveAsTemplate}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
           >
             Save Template
           </button>
@@ -86,7 +86,7 @@ const PrescriptionTemplates = ({ onApplyTemplate }) => {
               </div>
               <button
                 onClick={() => onApplyTemplate(template)}
-                className="px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
+                className="px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700"
               >
                 Apply
               </button>

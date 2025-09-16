@@ -201,7 +201,7 @@ const DoctorTestimonials = ({ doctorId }) => {
                         <button
                             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                             disabled={currentPage === 1}
-                            className={`px-4 py-2 rounded ${currentPage === 1 ? 'bg-gray-200' : 'bg-blue-500 text-white hover:bg-blue-600'}`}
+                            className={`px-4 py-2 rounded ${currentPage === 1 ? 'bg-gray-200' : 'bg-green-600 text-white hover:bg-green-700'}`}
                         >
                             Previous
                         </button>
@@ -211,7 +211,7 @@ const DoctorTestimonials = ({ doctorId }) => {
                         <button
                             onClick={() => setCurrentPage(prev => Math.min(prev + 1, Math.ceil(totalTestimonials / itemsPerPage)))}
                             disabled={currentPage === Math.ceil(totalTestimonials / itemsPerPage)}
-                            className={`px-4 py-2 rounded ${currentPage === Math.ceil(totalTestimonials / itemsPerPage) ? 'bg-gray-200' : 'bg-blue-500 text-white hover:bg-blue-600'}`}
+                            className={`px-4 py-2 rounded ${currentPage === Math.ceil(totalTestimonials / itemsPerPage) ? 'bg-gray-200' : 'bg-green-600 text-white hover:bg-green-700'}`}
                         >
                             Next
                         </button>

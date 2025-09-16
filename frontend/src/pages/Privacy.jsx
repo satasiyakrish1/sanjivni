@@ -108,7 +108,7 @@ const Privacy = () => {
         <ul className="list-disc pl-6">
           <li>📧 Email: support@sanjivni.com</li>
           <li>📞 Phone: +91 90000 00000</li>
-          <li>🌐 Website: <a href="https://sanjivni.vercel.app/" className="text-blue-500">sanjivni.vercel.app</a></li>
+          <li>🌐 Website: <a href="https://sanjivni.vercel.app/" className="text-green-600 hover:underline">sanjivni.vercel.app</a></li>
         </ul>
       </section>
         </div>

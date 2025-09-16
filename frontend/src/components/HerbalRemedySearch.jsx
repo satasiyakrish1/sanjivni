@@ -113,7 +113,7 @@ const HerbalRemedySearch = () => {
                 value={symptoms}
                 onChange={(e) => setSymptoms(e.target.value)}
                 placeholder="Example: I've been experiencing headaches and fatigue for the past few days. I also have trouble sleeping at night."
-                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary/60 transition-all duration-200 resize-none"
+                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-400 transition-all duration-200 resize-none"
                 disabled={isLoading}
                 aria-label="Describe your symptoms"
               />
@@ -142,7 +142,7 @@ const HerbalRemedySearch = () => {
               className={`flex-1 flex items-center justify-center px-6 py-3 rounded-lg font-medium text-white transition-all ${
                 isLoading || !symptoms.trim()
                   ? 'bg-gray-300 cursor-not-allowed'
-                  : 'bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
+                  : 'bg-primary hover:bg-primary-dark shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
               }`}
             >
               {isLoading ? (
@@ -186,9 +186,9 @@ const HerbalRemedySearch = () => {
           <div ref={resultRef} className="mt-8 transition-all duration-300 ease-in-out">
             <AIResponse content={remedy} title="Your Personalized Herbal Remedy" />
             <div className="mt-6">
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 text-center">
-                <h4 className="text-sm font-medium text-blue-800">Note</h4>
-                <p className="mt-1 text-sm text-blue-700">
+              <div className="bg-green-50 p-4 rounded-lg border border-green-100 text-center">
+                <h4 className="text-sm font-medium text-green-800">Note</h4>
+                <p className="mt-1 text-sm text-green-700">
                   These suggestions are informational and not a medical diagnosis.
                 </p>
               </div>

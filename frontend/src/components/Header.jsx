@@ -4,7 +4,7 @@ import SearchBar from './SearchBar'
 
 const Header = () => {
     return (
-        <div className='relative flex flex-col md:flex-row flex-wrap bg-primary rounded-lg px-6 md:px-10 lg:px-20 overflow-hidden'>
+        <div className='relative flex flex-col md:flex-row flex-wrap bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg px-6 md:px-10 lg:px-20 overflow-hidden'>
             
 
             {/* --------- Header Left --------- */}

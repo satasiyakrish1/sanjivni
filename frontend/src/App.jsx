@@ -17,6 +17,7 @@ import Terms from './pages/Terms';
 import LoadingScreen from './components/LoadingScreen';
 import { AppContext } from './context/AppContext';
 import SiteMap from './pages/SiteMap';
+import AIBot from './pages/AIBot';
 
 // FAQ page
 import Faq from './pages/Faq';
@@ -48,6 +49,7 @@ const App = () => {
         <Route path='/bmi-calculator' element={<BMICalculator />} />
         <Route path='/eye-test' element={<EyeTest />} />
         <Route path='/sitemap' element={<SiteMap />} />
+        <Route path='/ai-bot' element={<AIBot />} />
 
         {/* Not Found */}
         <Route path='*' element={<NotFound />} />

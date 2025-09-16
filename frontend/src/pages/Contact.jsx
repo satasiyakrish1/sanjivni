@@ -164,7 +164,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-600 focus:border-green-500"
                     placeholder="Your name"
                     required
                   />
@@ -180,7 +180,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-600 focus:border-green-500"
                     placeholder="your.email@example.com"
                     required
                   />
@@ -196,7 +196,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-600 focus:border-green-500"
                     placeholder="Your phone number"
                   />
                 </div>
@@ -210,7 +210,7 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-600 focus:border-green-500"
                     required
                   >
                     <option value="">Select a subject</option>
@@ -232,7 +232,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="6"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-600 focus:border-green-500"
                     placeholder="How can we help you?"
                     required
                   ></textarea>
@@ -252,7 +252,7 @@ const Contact = () => {
 
       {/* Career Section */}
       <div className="mb-20">
-        <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-8 rounded-lg">
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-lg">
           <div className="flex items-center mb-6">
             <Users className="text-primary mr-3" size={32} />
             <h2 className="text-3xl font-bold text-gray-800">Careers at Sanjivni</h2>

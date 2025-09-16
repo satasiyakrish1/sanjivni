@@ -159,7 +159,7 @@ const Team = () => {
         </div>
         
         {/* Timeline Summary */}
-        <div className="mt-12 bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-lg border border-green-200">
+        <div className="mt-12 bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-lg border border-green-200">
           <h3 className="text-xl font-semibold text-center text-gray-800 mb-4">✅ By Sept 17th, We Delivered:</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             <div className="flex items-center space-x-3">

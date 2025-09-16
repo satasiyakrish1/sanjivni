@@ -51,6 +51,31 @@ Suggested structure (use only those that apply):
 
 Keep it focused, specific, and safety-conscious but concise.`;
 
+const HERB_INFO_PROMPT = `You are an expert herbalist. Summarize practical, user-friendly information about: "{query}"
+
+Rules:
+- OUTPUT MUST BE MARKDOWN
+- Keep it concise and focused for end users
+- Include only sections that apply; omit the rest
+
+Suggested structure:
+
+### 🌿 Overview
+- 2–3 lines on what it is and traditional context
+
+### ✅ Benefits (evidence-informed)
+- 5–7 bullets with short rationale; include scientific names in italics if relevant
+
+### 🧪 Key Compounds
+- 2–4 notable constituents (e.g., gingerols, curcuminoids)
+
+### 🍵 How to Use
+- Tea/Infusion: measurements + steps
+- Other common forms (powder, fresh, topical) if appropriate
+
+### ⚠️ Notes
+- Brief safety/interaction notes if important (avoid generic disclaimers)`;
+
 function stripIrrelevantSections(symptoms, markdown) {
   if (!markdown) return markdown;
   const s = (symptoms || '').toLowerCase();
@@ -336,7 +361,55 @@ function generateFallbackHerbalRemedy(symptoms) {
   return `${perCategorySections}\n\n${generalSection}\n\n### 🗓️ Daily Schedule\n${schedule}\n\n### 📋 Specific Instructions\n${personalizedTips || '- Follow the routine daily and adjust to your tolerance.'}`;
 }
 
+async function generateHerbInfo(query) {
+  const q = (query || '').trim();
+  if (!q) throw new ApiError(400, 'Please provide an herb or query.');
+  if (!googleGenAI) return generateFallbackHerbInfo(q);
+  try {
+    const model = googleGenAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+    const result = await model.generateContent([{ text: HERB_INFO_PROMPT.replace('{query}', q.slice(0, 200)) }]);
+    let text = result?.response?.text?.() || '';
+    return text && text.length > 40 ? text : generateFallbackHerbInfo(q);
+  } catch (err) {
+    if (isQuotaOrRateLimitError(err)) return generateFallbackHerbInfo(q);
+    return generateFallbackHerbInfo(q);
+  }
+}
+
+function generateFallbackHerbInfo(query) {
+  const name = String(query).trim();
+  const simple = name.replace(/what\s+is\s+|benefits?\s+of\s+/i, '').trim();
+  const herb = simple || name || 'Ginger';
+  const lower = herb.toLowerCase();
+  const samples = {
+    ginger: {
+      overview: 'Ginger (Zingiber officinale) is a warming rhizome widely used in Ayurveda and traditional medicine for digestion and circulation.',
+      benefits: [
+        'May ease nausea and motion sickness',
+        'Supports digestion and helps reduce bloating',
+        'Warming circulatory support for cold extremities',
+        'Traditionally used for sore throat comfort',
+        'Contains antioxidant gingerols and shogaols'
+      ],
+      compounds: ['Gingerols', 'Shogaols', 'Zingerone'],
+      use: [
+        'Tea/Decoction: 4–5 thin slices in 250 ml water, simmer 8–10 min; add lemon/honey when warm',
+        'Fresh: chew a thin slice after meals if well tolerated',
+        'Powder: 1/4–1/2 tsp in warm water once daily'
+      ],
+      notes: ['Avoid large amounts if you have active reflux or gastric irritation', 'If on blood thinners, consult a professional']
+    }
+  };
+  const pick = /ginger/.test(lower) ? samples.ginger : samples.ginger; // fallback generic
+  const b = pick.benefits.map(x => `- ${x}`).join('\n');
+  const c = pick.compounds.map(x => `- ${x}`).join('\n');
+  const u = pick.use.map(x => `- ${x}`).join('\n');
+  const n = pick.notes.map(x => `- ${x}`).join('\n');
+  return `### 🌿 Overview\n- ${pick.overview}\n\n### ✅ Benefits (evidence-informed)\n${b}\n\n### 🧪 Key Compounds\n${c}\n\n### 🍵 How to Use\n${u}\n\n### ⚠️ Notes\n${n}`;
+}
+
 module.exports = {
   checkIfHealthRelated,
-  generateHerbalRemedy
+  generateHerbalRemedy,
+  generateHerbInfo
 };

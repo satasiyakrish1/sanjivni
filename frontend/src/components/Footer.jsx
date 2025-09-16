@@ -54,16 +54,16 @@ const Footer = () => {
             {/* Social Media Icons */}
 
             <div className="flex space-x-4 mt-5">
-              <a href={facebookUrl} className="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+              <a href={facebookUrl} className="text-gray-500 hover:text-green-600 transition-colors duration-300">
                 <Facebook size={18} />
               </a>
-              <a href={twitterUrl} className="text-gray-500 hover:text-blue-400 transition-colors duration-300">
+              <a href={twitterUrl} className="text-gray-500 hover:text-green-500 transition-colors duration-300">
                 <Twitter size={18} />
               </a>
               <a href={instagramUrl} className="text-gray-500 hover:text-pink-600 transition-colors duration-300">
                 <Instagram size={18} />
               </a>
-              <a href={linkedinUrl} className="text-gray-500 hover:text-blue-800 transition-colors duration-300">
+              <a href={linkedinUrl} className="text-gray-500 hover:text-green-800 transition-colors duration-300">
                 <Linkedin size={18} />
               </a>
             </div>
@@ -109,13 +109,13 @@ const Footer = () => {
                   value={email}
                   onChange={handleEmailChange}
                   placeholder="Enter your email address"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-green-600 text-sm"
                   disabled={isLoading}
                 />
                 <button 
                   type="submit"
-                  className={`bg-blue-600 whitespace-nowrap text-white px-4 py-2 rounded-r-md transition-colors duration-300 text-sm ${
-                    !isEmailValid ? 'opacity-70 cursor-not-allowed' : 'hover:bg-blue-700'
+                  className={`bg-green-600 whitespace-nowrap text-white px-4 py-2 rounded-r-md transition-colors duration-300 text-sm ${
+                    !isEmailValid ? 'opacity-70 cursor-not-allowed' : 'hover:bg-green-700'
                   }`}
                   disabled={!isEmailValid}
                 >
@@ -144,7 +144,7 @@ const Footer = () => {
           <hr />
           <div className="flex flex-col sm:flex-row items-center justify-between py-5 text-sm">
             <p className="text-left w-full sm:w-auto">Copyright {currentYear} @Team Sanjivani AI - All Right Reserved.</p>
-            <a href="/sitemap" className="mt-2 sm:mt-0 inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded hover:bg-blue-200 transition">Site Map</a>
+            <a href="/sitemap" className="mt-2 sm:mt-0 inline-block bg-green-100 text-green-700 px-4 py-2 rounded hover:bg-green-200 transition">Site Map</a>
           </div>
         </div>
       </div>

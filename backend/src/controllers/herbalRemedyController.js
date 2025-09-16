@@ -1,4 +1,4 @@
-const { checkIfHealthRelated, generateHerbalRemedy } = require('../services/aiService');
+const { checkIfHealthRelated, generateHerbalRemedy, generateHerbInfo } = require('../services/aiService');
 const { ApiError } = require('../middleware/errorHandler');
 
 const MIN_SYMPTOMS_LENGTH = 10;
@@ -52,3 +52,18 @@ module.exports = {
   getHerbalRemedy,
   getHerbalRemedyHandler
 };
+
+async function getHerbInfoHandler(req, res, next) {
+  try {
+    const { query } = req.body || {};
+    if (!query || String(query).trim().length < 3) {
+      throw new ApiError(400, 'Please provide an herb query, e.g., "benefits of ginger"');
+    }
+    const text = await generateHerbInfo(String(query))
+    res.json({ status: 'success', data: { info: text } });
+  } catch (error) {
+    next(error);
+  }
+}
+
+module.exports.getHerbInfoHandler = getHerbInfoHandler;
