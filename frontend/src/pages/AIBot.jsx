@@ -34,13 +34,34 @@ const AIBot = () => {
   const [error, setError] = useState('')
   const [diagnostics, setDiagnostics] = useState(null)
   const [showDiag, setShowDiag] = useState(false)
+  const [autoScroll, setAutoScroll] = useState(true)
   const scrollRef = useRef(null)
 
+  const scrollToBottom = () => {
+    if (!scrollRef.current) return
+    if (!autoScroll) return
+    scrollRef.current.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' })
+  }
+
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight
-    }
+    // Use setTimeout to ensure DOM is updated after AIResponse renders
+    setTimeout(scrollToBottom, 100)
   }, [messages, loading])
+
+  // Additional scroll effect for when AIResponse content loads
+  useEffect(() => {
+    if (!loading) {
+      setTimeout(scrollToBottom, 300)
+    }
+  }, [loading])
+
+  // Track whether user is near the bottom; only then auto-scroll
+  const handleScroll = () => {
+    if (!scrollRef.current) return
+    const { scrollTop, clientHeight, scrollHeight } = scrollRef.current
+    const distanceFromBottom = scrollHeight - (scrollTop + clientHeight)
+    setAutoScroll(distanceFromBottom < 80)
+  }
 
   const sendMessage = async (prompt) => {
     const text = (prompt ?? input).trim()
@@ -69,6 +90,9 @@ const AIBot = () => {
         }
         return updated
       })
+      
+      // Ensure scroll after AI response is set
+      setTimeout(scrollToBottom, 150)
     } catch (e) {
       setError(e.message || 'Network error: Unable to reach the AI service. Please verify the backend is running and accessible.')
       try {
@@ -123,7 +147,7 @@ const AIBot = () => {
           </div>
 
           {/* Chat area */}
-          <div ref={scrollRef} className="h-[52vh] md:h-[60vh] overflow-y-auto rounded-2xl border border-gray-200 bg-white p-3 md:p-4 shadow-sm">
+          <div ref={scrollRef} onScroll={handleScroll} className="h-[52vh] md:h-[60vh] overflow-y-auto rounded-2xl border border-gray-200 bg-white p-3 md:p-4 shadow-sm">
             {messages.map((m, i) => (
               m.pending ? (
                 <MessageBubble key={i} role="assistant" isPending text="" />

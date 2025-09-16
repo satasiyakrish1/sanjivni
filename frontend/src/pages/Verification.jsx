@@ -168,7 +168,7 @@ const Verification = () => {
                     contact: userData.phone || ''
                 },
                 theme: {
-                    color: '#5f6fff'
+                    color: '#5fff7a'
                 },
                 modal: {
                     ondismiss: function() {

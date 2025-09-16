@@ -71,7 +71,7 @@ const Contact = () => {
           <div className="rounded-lg overflow-hidden shadow-lg mb-10">
             <img
               className="w-full"
-              src={assets.about}
+              src="/plant.svg"
               alt="Sanjivani AI Contact Support"
             />
           </div>
